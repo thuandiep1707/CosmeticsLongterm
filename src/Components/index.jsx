@@ -1,12 +1,35 @@
+import { useState } from 'react';
+
 import Login from './Login/login'
+import Admin from './Client/Admin/index'
+import Customer from './Client/Customer/index';
 import './index.scss';
 
 const Index = () => {
-    return (
-        <div className="main">
-            <Login />
-        </div>
-    )
+    const [role,changeRole] = useState('Customer');
+    if (role == 'Login') 
+    {
+        console.log(">>>>>>>>>>>>>")
+        return (
+            <div className="main">
+                <Login />
+            </div>
+        )
+    } else if (role == 'Admin') 
+    {
+        return (
+            <div className="main">
+                <Admin />
+            </div>
+        )
+    } else if (role == 'Customer') 
+    {
+        return (
+            <div className = "main">
+                <Customer />
+            </div>
+        )
+    }
 }
 
 export default Index;
