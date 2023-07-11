@@ -9,7 +9,6 @@ const Index = () => {
     const [role,changeRole] = useState('Customer');
     if (role == 'Login') 
     {
-        console.log(">>>>>>>>>>>>>")
         return (
             <div className="main">
                 <Login />
