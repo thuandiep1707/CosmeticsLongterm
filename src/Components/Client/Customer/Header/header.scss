@@ -1,0 +1,94 @@
+.customerHeader{
+    &_nav{
+        position: relative;
+        display: flex;
+        align-items: center;
+        // margin: 0 auto;
+        justify-content: center;
+        border-bottom: 1px solid black;
+        height: 60px;
+        li{
+            // border: 1px solid black;
+            position: relative;
+            display: inline-block;
+            margin: 10px 15px;
+            .nav_title{
+                letter-spacing: 2px;
+                font-size: 15px;
+                font-weight: 100;
+                position: relative;
+                top: 10px;
+                // text-decoration: none;
+                // width: 80px;
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 30px;
+                    width: 100%;
+                    position: absolute;
+                }
+                &:hover{
+                    cursor:pointer;
+                }
+                .link{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            &::after{
+                content: "";
+                display: inline-block;
+                width: 0;
+                height: 2px;
+                background-color: black;
+            }
+            &:hover,
+            &:active{
+                &::after{
+                    width: 96%;
+                    transition: 0.25s;
+                }
+            }
+            .menu{
+                // border: 1px solid black;
+                display: none;
+                background-color: black;
+                position: absolute;
+                width: 200px;
+                height: 0;
+                top: 48px;
+                left: -30px;
+                overflow-y: hidden;
+                .page{
+                    color: rgb(182, 182, 182);
+                    display: block;
+                    text-decoration: none;
+                    margin: 5px 10px;
+                    padding: 5px;
+                    &:hover,
+                    &:active{
+                        color: #fff;
+                    }
+                }
+                
+            }
+            &:hover,
+            &:active{
+               .menu{
+                    animation: scrollMenu 0.5s forwards;
+                    display: block;
+                } 
+            }
+        }
+    }
+}
+
+@keyframes scrollMenu {
+    from{
+        
+        height: 0px;
+    }
+    to{
+        height: 175px;
+    }
+}
