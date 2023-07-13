@@ -133,19 +133,18 @@
                 font-size: 15px;
                 width: 500px;
                 letter-spacing: 1px;
-                animation: content_to_left  1s 1s forwards;
+                animation: content_to_left  1s 0.7s forwards;
             }
             .btnchitiet{
                 display: inline-block;
                 opacity: 0;
                 background-color: aliceblue;
                 border: 1px solid aliceblue;
-                margin: 10px 20px;
                 padding: 10px 30px;
                 color: rgb(61,61,61);
                 font-size: 12px;
                 letter-spacing: 2.5px;
-                animation: content_to_left  1s 1s forwards;
+                animation: content_to_left_btn  1s 1s forwards;
                 transition: 0.25s;                
                 &:hover,
                 &:active{
@@ -176,6 +175,17 @@
     }
     to{
         margin-left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes content_to_left_btn {
+    from{
+        margin: 10px 20px 10px 50px;
+        opacity: 0;
+    }
+    to{
+        margin: 10px 20px;
         opacity: 1;
     }
 }

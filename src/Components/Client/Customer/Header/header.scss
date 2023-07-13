@@ -1,8 +1,10 @@
 .customerHeader{
     position: fixed;
+    z-index: 1000;
      top: 0;
      left: 0;
-     width: 100vw;
+     width: 100%;
+     background-color: #ffffffad;
     .logo{
         position: absolute;
         z-index: 10;
