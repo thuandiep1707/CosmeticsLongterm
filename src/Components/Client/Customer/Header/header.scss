@@ -1,11 +1,35 @@
 .customerHeader{
+    position: fixed;
+     top: 0;
+     left: 0;
+     width: 100vw;
+    .logo{
+        position: absolute;
+        z-index: 10;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        &_square{
+            display: inline-block;
+            margin: 5px;
+            height: 50px;
+            width: 50px;
+            border: 5px solid rgb(61, 61, 61);
+            border-radius: 20%;
+        }
+        &_brand{
+            display: inline-block;
+            color:  rgb(61, 61, 61);
+            font-size: 25px;
+        }
+    }
     &_nav{
         position: relative;
         display: flex;
         align-items: center;
         // margin: 0 auto;
         justify-content: center;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid rgb(61, 61, 61);
         height: 60px;
         li{
             // border: 1px solid black;
@@ -27,12 +51,8 @@
                     width: 100%;
                     position: absolute;
                 }
-                &:hover{
-                    cursor:pointer;
-                }
                 .link{
-                    text-decoration: none;
-                    color: black;
+                    color: rgb(61, 61, 61);
                 }
             }
             &::after{
@@ -40,7 +60,7 @@
                 display: inline-block;
                 width: 0;
                 height: 2px;
-                background-color: black;
+                background-color: rgb(61, 61, 61);
             }
             &:hover,
             &:active{
@@ -52,7 +72,7 @@
             .menu{
                 // border: 1px solid black;
                 display: none;
-                background-color: black;
+                background-color: rgb(61, 61, 61);
                 position: absolute;
                 width: 200px;
                 height: 0;
@@ -81,6 +101,27 @@
             }
         }
     }
+    &_icon{
+        display: flex;
+         align-items: center;
+        position: absolute;
+         right: 0;
+         top: 0;
+        height: 60px;
+        .icon{
+            display: inline-block;
+            margin:0 10px;
+            font-size: 15px;
+            color: rgb(61, 61, 61);
+        }
+
+    }
+}
+.space{
+    display: block;
+    height: 60px;
+    width: 100vw;
+    // background-color: aqua;
 }
 
 @keyframes scrollMenu {

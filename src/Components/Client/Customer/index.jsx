@@ -7,6 +7,9 @@ import BlogsMain from './Blogs/BlogsMain'
 import PagesMain from './Pages/PageMain'
 import Portfolio from './Portfolio/Portfolio'
 import Contact from './Contact/Contact'
+import Setting from './Setting/Setting'
+import Profile from './Profile/Profile'
+
 import './index.scss'
 
 const customerMainPage = () => {
@@ -14,12 +17,14 @@ const customerMainPage = () => {
         <div className="customerMain">
             <Header />
             <Routes>
-                <Route exact path="/home" Component={HomeMain}/>
-                <Route path="/shops" Component={ShopsMain}/>
-                <Route path="/blogs" Component={BlogsMain}/>
-                <Route path="/pages" Component={PagesMain}/>
-                <Route path="/portfolio" Component={Portfolio}/>
-                <Route path="/contact" Component={Contact}/>
+                <Route path="/" element={<HomeMain />} />
+                <Route path="/shops/*" element={<ShopsMain />} />
+                <Route path="/blogs" element={<BlogsMain />} />
+                <Route path="/pages" element={<PagesMain />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/setting" element={<Setting />} />
+                <Route path="/profile" element={<Profile />} />
             </Routes>
         </div>
     )

@@ -1,11 +1,13 @@
 
 
+import SlideShow from './ComponentsHomePage/SlideShow/slideshow';
+
 import './homepage.scss'
 
 const HomeMain = () => {
     return (
         <div className="homepage">
-            home nè
+            <SlideShow />
         </div>
     )
 }
