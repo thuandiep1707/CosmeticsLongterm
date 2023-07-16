@@ -1,0 +1,11 @@
+.shopsmain{
+    opacity: 0;
+    animation: start_component 2s 0s forwards;
+}
+
+@keyframes start_component{
+    to{
+        opacity: 1;
+        background-color: white;
+    }
+}

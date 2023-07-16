@@ -60,7 +60,12 @@ const customerHeader = () => {
                         </h3>
                     </li>
                 </ul>
+                    
                 <div className="customerHeader_icon">
+                    <div className="customerHeader_icon_search_bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Bạn muốn tìm sản phẩm nào?" className="customerHeader_icon_search_bar_input"/>
+                    </div>
                     <div className="link">
                         <i class="fa-solid fa-cart-shopping icon cart"></i>
                     </div>

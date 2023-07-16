@@ -1,0 +1,14 @@
+.homepage{
+    width: 100%;
+    opacity: 0;
+    // background-color: rgb(34, 34, 34);
+
+    animation: start_component 2s 0s forwards;
+}
+
+@keyframes start_component{
+    to{
+        opacity: 1;
+        background-color: white;
+    }
+}

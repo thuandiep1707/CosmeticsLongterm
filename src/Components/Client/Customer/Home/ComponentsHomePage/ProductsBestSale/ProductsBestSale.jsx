@@ -17,7 +17,7 @@ const ProductBestSaller = (props) => {
                             <p className="name">{value.name}</p>
                             <p className="producer">{value.producer}</p>
                             <p className="price">{value.price}</p>
-                            <Link to >Chi tiết</Link>
+                            <Link to={value.url} className='link products_product_btn'>XEM THÊM</Link>
                         </div>
                     )
                 })}

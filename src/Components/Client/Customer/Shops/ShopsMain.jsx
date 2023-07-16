@@ -12,6 +12,7 @@ import './shopsmain.scss'
 const ShopsMain = () => {
     return (
         <div className="shopsmain">
+            
             <Routes>
                 <Route path="/" element={<ShopGeneral />} />
                 <Route path="/lipstick" element={<Lipstick />} />

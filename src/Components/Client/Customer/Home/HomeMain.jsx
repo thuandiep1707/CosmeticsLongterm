@@ -21,6 +21,7 @@ const HomeMain = () => {
         // console.log(slideNum)
         return changeSlideNum(num)
     }
+    // setInterval(console.log(slideNum+1), 1000)
 
     //xử lý cho phần best sale
     return (
@@ -33,6 +34,7 @@ const HomeMain = () => {
             url={slideData[slideNum].url}/>
             <ProductBestSale 
             bestSaleData={bestSaleData}/>
+            <div className="homepage_space"></div>
         </div>
     )
 }

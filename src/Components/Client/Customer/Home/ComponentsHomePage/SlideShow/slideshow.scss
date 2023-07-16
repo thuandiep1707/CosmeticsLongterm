@@ -1,17 +1,21 @@
 .slideshow{
-    height: 70vh;
+    position: relative;
+    // height: 70vh;
+    // width: 1905px;
     // border: 1px solid black;
     display: flex;
     justify-content: center;
     &_img{
         height: 100%;
+        width: 100%;
         
     }
     &_contents{
         background-color: rgba(0, 0, 0, 0.151);
         width: 100%;
-        height: 70vh;
+        height: 100%;
         position: absolute;
+        // border: 1px solid black;
         .prev{
             position: absolute;
              left: 0;
@@ -71,8 +75,8 @@
             //  top: 35vh;
             //  transform: translateY(-50%);
             height: 100%;
-            width: 300px;
-            padding-left: 200px;
+            width: 200px;
+            padding-left: 100px;
             background-image: linear-gradient(to left ,rgba(1, 1, 1, 0.7) 10%,rgba(2, 2, 2, 0.01));
             color: rgba(255, 255, 255, 0.475);
             font-size: 16px;

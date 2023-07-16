@@ -9,31 +9,36 @@ const bestSale = [
         "name"     : "BLOOMING GARDEN",
         "producer" : "JILLIAN",
         "img"      : jillian0,
-        "price"    : "600,000đ"
+        "price"    : "600,000đ",
+        "url"      : "/shops/lipstick/JILLIAN"
     },
     {
         "name"     : "EDELWEISS",
         "producer" : "JILLIAN",
         "img"      : jillian1,
-        "price"    : "600,000đ"
+        "price"    : "600,000đ",
+        "url"      : "/shops/lipstick/JILLIAN"
     },
     {
         "name"     : "BLOOMING GARDEN",
         "producer" : "JILLIAN",
         "img"      : jillian2,
-        "price"    : "600,000đ"
+        "price"    : "600,000đ",
+        "url"      : "/shops/lipstick/JILLIAN"
     },
     {
         "name"     : "HOTTING UP SWEETLY",
         "producer" : "JILLIAN",
         "img"      : jillian3,
-        "price"    : "600,000đ"
+        "price"    : "600,000đ",
+        "url"      : "/shops/lipstick/JILLIAN"
     },
     {
         "name"     : "BELOVED J",
         "producer" : "JILLIAN",
         "img"      : jillian4,
-        "price"    : "600,000đ"
+        "price"    : "600,000đ",
+        "url"      : "/shops/lipstick/JILLIAN"
     }
 ]
 
