@@ -18,7 +18,8 @@ const customerMainPage = () => {
             <Header />
             <Routes>
                 <Route path="/" element={<HomeMain />} />
-                <Route path="/shops/*" element={<ShopsMain />} />
+                <Route path="/shops/:styleproducts" element={<ShopsMain />} />
+                {/* <Route path="/shops//:nameproduct/:id" element={<ShopsMain />} /> */}
                 <Route path="/blogs" element={<BlogsMain />} />
                 <Route path="/pages" element={<PagesMain />} />
                 <Route path="/portfolio" element={<Portfolio />} />

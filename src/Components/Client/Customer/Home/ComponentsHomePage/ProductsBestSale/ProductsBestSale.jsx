@@ -10,14 +10,14 @@ const ProductBestSaller = (props) => {
                 SẢN PHẨM NỔI BẬT
             </h1>
             <div className="products">
-                {bestSaleData.map((value)=>{
+                {bestSaleData.map((value,index)=>{
                     return(
-                        <div className="products_product">
+                        <div className="products_product" key={index}>
                             <img src={value.img} alt={value.name}  className='img'/>
                             <p className="name">{value.name}</p>
                             <p className="producer">{value.producer}</p>
                             <p className="price">{value.price}</p>
-                            <Link to={value.url} className='link products_product_btn'>XEM THÊM</Link>
+                            <Link to={value.url} className='link products_product_btn'>XEM CHI TIẾT</Link>
                         </div>
                     )
                 })}

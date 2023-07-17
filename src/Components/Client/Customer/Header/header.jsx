@@ -15,7 +15,7 @@ const customerHeader = () => {
                 <ul className='customerHeader_nav'>
                     <li>
                         <h3 className="nav_title">
-                            <Link to="/shops" className="link">SHOPS</Link>
+                            <Link to="/shops/general" className="link">SHOPS</Link>
                         </h3>
                         <nav className="menu shop">
                             <Link to="/shops/lipstick" className="page lipstick">Lipstick</Link>
@@ -63,17 +63,17 @@ const customerHeader = () => {
                     
                 <div className="customerHeader_icon">
                     <div className="customerHeader_icon_search_bar">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                         <input type="text" placeholder="Bạn muốn tìm sản phẩm nào?" className="customerHeader_icon_search_bar_input"/>
                     </div>
                     <div className="link">
-                        <i class="fa-solid fa-cart-shopping icon cart"></i>
+                        <i className="fa-solid fa-cart-shopping icon cart"></i>
                     </div>
                     <Link to="/setting">
-                        <i class="fa-sharp fa-solid fa-gear icon setting"></i>
+                        <i className="fa-sharp fa-solid fa-gear icon setting"></i>
                     </Link>
                     <Link to="/profile">
-                        <i class="fa-solid fa-user icon profile"></i>
+                        <i className="fa-solid fa-user icon profile"></i>
                     </Link>
                 </div>
             </div>
