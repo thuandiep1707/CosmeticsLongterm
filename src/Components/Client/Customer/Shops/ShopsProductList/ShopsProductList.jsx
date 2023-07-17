@@ -1,21 +1,20 @@
 import { useEffect, useState } from 'react'
 import {Routes, Route, useParams} from 'react-router-dom'
 
-import Product from './Product/Product'
-import ShopGeneral from './General/ShopGeneral'
-import Lipstick from './Lipstick/Lipstick'
-import MakeUp from './MakeUp/Makeup'
-import Serum from './Serum/Serum'
-import Toner from './Toner/Toner'
-import Perfume from './Perfume/Perfume'
+import Product from './Product'
+// import ShopGeneral from './General/ShopGeneral'
+// import Lipstick from './Lipstick/Lipstick'
+// import MakeUp from './MakeUp/Makeup'
+// import Serum from './Serum/Serum'
+// import Toner from './Toner/Toner'
+// import Perfume from './Perfume/Perfume'
 
-import productsData from './Data/data.js'
-import posterGeneral from './Data/Img/poster/posterGeneral.jpeg'
+import posterGeneral from './poster/posterGeneral.jpeg'
 
-import './shopsmain.scss'
+import './ShopsProductList.scss'
 
-const ShopsMain = () => {
-    
+const ShopsProducts = (props) => {
+    const productsData = props.productsData
     //lấy param từ url
     const param = useParams()
     // console.log(param)
@@ -33,8 +32,8 @@ const ShopsMain = () => {
             productsData.filter((product) => {
                 return product.category.name == styleproducts
             }))
-            console.log(styleproducts)
-            console.log(productsList)
+            // console.log(styleproducts)
+            // console.log(productsList)
         }
         useEffect(() => {
             if (param.styleproducts == "general"){
@@ -85,12 +84,12 @@ const ShopsMain = () => {
                 return productsList.filter(product => product.propoties.collection == value[0])
             }
             })
-        console.log(value)
-        console.log(productFilter)
+        // console.log(value)
+        // console.log(productFilter)
     }
     useEffect(()=>{
-        console.log("productsList")
-        console.log(productsList)
+        // console.log("productsList")
+        // console.log(productsList)
         setProductFilter(productsList)
     },[productsList])
 
@@ -185,4 +184,4 @@ const ShopsMain = () => {
     )
 }
 
-export default ShopsMain;
+export default ShopsProducts;
