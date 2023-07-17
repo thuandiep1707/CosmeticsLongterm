@@ -9,10 +9,19 @@ const ShopsProduct = (props) => {
     
     //api
     const product = props.productsData.filter(product => product.category.name == param.styleproducts).find(product => product.id == param.id)
+    // const [productsList, setProductsList] = useState() 
+    // for (let i=0; i<4; i++){
+    //     setProductsList([...productsList,props.productsData[i]])
+    // }
+    // console.log(productsList)
     
     //xử lý thay đổi img
     const [imgNum, setImgNum] = useState(0)
-    // const handleChangeImg[]
+    const handleChangeImg = (value) => {
+        let num = imgNum+value;
+        if (num > product.img.length-1){return setImgNum(0)} else if (num < 0) {return setImgNum(product.img.length-1)}
+        return setImgNum(num)
+    }
 
     //nhận số lượng sản phẩm 
     const [productSum,setProductSum] = useState(1)
@@ -24,8 +33,8 @@ const ShopsProduct = (props) => {
             <div className="shopsproduct_content_imglist">
                 <img src={product.img[imgNum]}  className="shopsproduct_content_imglist_bigimg"/>
                 <div className="img_change">
-                    <div className="img_prev"/>
-                    <div className="img_next"/>
+                    <div className="img_prev" onClick={()=>handleChangeImg(-1)}/>
+                    <div className="img_next" onClick={()=>handleChangeImg(1)}/>
                 </div>
                 <div className="shopsproduct_content_imglist_smallimg">
                 {product.img.map((imgChild,index) =>{
@@ -38,11 +47,11 @@ const ShopsProduct = (props) => {
                 <h5 className="shopsproduct_content_information_producer">EAU DE PARFUM</h5>
                 <p className="shopsproduct_content_information_description">{product.propoties.description}</p>
                 <div className="shopsproduct_content_information_milprice">
-                    <p className="mil">50ml</p>
-                    <p className="price">{product.price}đ</p>
+                    {/* <p className="mil"><u>50ml</u></p> */}
+                    <p className="price">{product.price}đ - <del>{product.price*110/100}đ</del></p>
                 </div>
                 <div className="shopsproduct_content_information_sumadd">
-                    <input type="number" value={productSum} className='sum'/>
+                    <input type="number" value={productSum} onChange={e=>setProductSum(e.target.value)} className='sum'/>
                     <div className="add btn">THÊM VÀO GIỎ HÀNG</div>
                 </div>
                 <div className="shopsproduct_content_information_set">

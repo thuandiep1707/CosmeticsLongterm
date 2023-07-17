@@ -4,44 +4,12 @@
     align-items: center;
     opacity: 0;
     animation: start_component 2s 0s forwards;
-        &_poster{
-            background-image: linear-gradient(90deg,rgba(3, 3, 3, 0.39) 100%,#ffff), url("./shopBackground1.jpeg") ;
-            background-position: fixed;
-            background-attachment: fixed;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 500px;
-            width: 100%;
-            
-            &_logo{
-                // position: absolute;
-                z-index: 10;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                scale: 3;
-                &_square{
-                    display: inline-block;
-                    margin: 5px;
-                    height: 50px;
-                    width: 50px;
-                    border: 5px solid #dadada;
-                    border-radius: 20%;
-                }
-                &_brand{
-                    display: inline-block;
-                    color:  #dadada;
-                    font-size: 35px;
-                    letter-spacing: 5px;
-                }
-            }
-        }
         &_products{
             background-color: rgb(255, 255, 255);
             width: 1200px;
-            padding-top: 50px;
+            padding-top: 10px;
+            margin-top: 5px;
+            box-shadow: 0px 0px 20px 10px rgb(0, 0, 0);
             &_filter{
                 display: flex;
                  justify-content: space-around;

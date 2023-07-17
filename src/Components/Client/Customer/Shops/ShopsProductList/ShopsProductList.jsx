@@ -9,7 +9,6 @@ import Product from './Product'
 // import Toner from './Toner/Toner'
 // import Perfume from './Perfume/Perfume'
 
-import posterGeneral from './poster/posterGeneral.jpeg'
 
 import './ShopsProductList.scss'
 
@@ -18,12 +17,6 @@ const ShopsProducts = (props) => {
     //lấy param từ url
     const param = useParams()
     // console.log(param)
-
-    //chỉ định hình ảnh cho poster
-    const [backgroundPoster,setBackgroundPoster] = useState(posterGeneral)
-    const stylePoster = {
-        "backgroundImage": `linear-gradient(90deg,rgba(3, 3, 3, 0.39) 100%,#ffff), url(${backgroundPoster})`
-    }
     
     //chọn danh sách sản phẩm đầu vào 
     const [productsList,setProductsList] = useState(productsData)
@@ -96,15 +89,6 @@ const ShopsProducts = (props) => {
 
     return (
         <div className="shopsmain">
-            <div className="shopsmain_poster"
-                style={stylePoster}>
-                <div className="shopsmain_poster_logo">
-                    <div className="shopsmain_poster_logo_square"></div>
-                        <h3 className="shopsmain_poster_logo_brand">
-                            Long term
-                        </h3>
-                    </div>
-                </div>
             <section className="shopsmain_products">
                     <div className="shopsmain_products_filter">
                         <div className="shopsmain_products_filter_general filter general"
