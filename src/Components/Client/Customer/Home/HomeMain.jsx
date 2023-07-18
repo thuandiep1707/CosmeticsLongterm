@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
-import SlideShow from './ComponentsHomePage/SlideShow/slideshow';
-import ProductBestSale from './ComponentsHomePage/ProductsBestSale/ProductsBestSale';
+import SlideShow from './ComponentsHomePage/SlideShow/Slideshow.jsx';
+import ProductBestSale from './ComponentsHomePage/ProductsBestSale/ProductsBestSale.jsx';
 
 import slideData from './ComponentsHomePage/SlideShow/data';
 import bestSaleData from './ComponentsHomePage/ProductsBestSale/data';
