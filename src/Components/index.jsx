@@ -6,7 +6,7 @@ import Customer from './Client/Customer/index';
 import './index.scss';
 
 const Index = () => {
-    const [role,changeRole] = useState('Customer');
+    const [role,changeRole] = useState('Admin');
     if (role == 'Login') 
     {
         return (

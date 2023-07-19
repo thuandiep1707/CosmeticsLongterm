@@ -1,12 +1,22 @@
+import {Routes, Route} from 'react-router-dom'
+import AdminHeader from './Header/AdminHeader'
+import Category from './Category/Category'
+import CategoryDetail from './CategoryDetail/CategoryDetail'
+import Customer from './Customer/Customer'
+import AdminHome from './Home/AdminHome'
+import AdminProduct from './Product/AdminProduct'
+import AdminProductDetail from './ProductDetail/AdminProductDetail'
 
 
 import './index.scss'
 
-const adminMainPage = () => {
+const AdminMainPage = () => {
     return(
         <div className="adminMain">
-            <h1>Admin</h1>
+            <Routes>
+
+            </Routes>
         </div>
     )
 }
-export default adminMainPage;
+export default AdminMainPage;
