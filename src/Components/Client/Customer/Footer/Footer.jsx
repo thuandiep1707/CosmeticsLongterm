@@ -51,10 +51,10 @@ export default () => {
                     </p>
                 </div>
                 <div className="customer_footer_contact_icon">
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-twitter-square"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-google-plus-square"></i>
+                    <i className="fab fa-facebook-square"></i>
+                    <i className="fab fa-twitter-square"></i>
+                    <i className="fab fa-instagram"></i>
+                    <i className="fab fa-google-plus-square"></i>
                 </div>
             </div>
         </div>

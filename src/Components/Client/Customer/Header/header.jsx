@@ -1,5 +1,7 @@
 import {Routes, Route, Link} from "react-router-dom";
 
+import Cart from './Cart/Cart'
+
 import './header.scss';
 
 const customerHeader = () => {
@@ -68,6 +70,7 @@ const customerHeader = () => {
                     </div>
                     <div className="link">
                         <i className="fa-solid fa-cart-shopping icon cart"></i>
+                        <Cart/>
                     </div>
                     <Link to="/setting">
                         <i className="fa-sharp fa-solid fa-gear icon setting"></i>

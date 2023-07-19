@@ -1,13 +1,19 @@
+import {useContext, useState } from 'react'
 import {useParams, Link} from 'react-router-dom'
 
+import { GlobalContext } from '../../../../../GlobalContext'
+
 import './shopsproduct.scss'
-import { useState } from 'react'
 
 const ShopsProduct = (props) => {
     //lấy params
     const param = useParams()
+
+    //lấy data từ context
+    const globalContext = useContext(GlobalContext)
+    const cart = globalContext.cart
     
-    //api
+    //lấy dữ liệu
     const product = props.productsData.filter(product => product.category.name == param.styleproducts).find(product => product.id == param.id)
     
     //xử lý thay đổi img
@@ -20,7 +26,35 @@ const ShopsProduct = (props) => {
 
     //nhận số lượng sản phẩm 
     const [productSum,setProductSum] = useState(1)
-
+    
+    //xử lý data đưa hàng vào giỏ hàng
+    
+    const handleAddProductToCart = () => {
+        let newProduct = {
+            "id"      : product.id,
+            "name"    : product.name,
+            "price"   : product.price,
+            "img"     : product.img[0],
+            "category": {
+                "id"     : product.category.id,
+                "name"   : product.category.name
+            },
+            "quantity":productSum
+        }
+        // let oldProduct = cart.filter(product => product.id==newProduct.id)
+        // console.log("old>>>>>")
+        // console.log(oldProduct)
+        // if (oldProduct){
+        //     console.log("hehehe")
+        //     let cartFilter= cart.filter(product => product.id !== oldProduct.id)
+        //     console.log("cart"+oldProduct)
+        //     console.log("check>>>>>>>")
+        //     console.log(cartFilter)
+        //     // return globalContext.setCart(cartFilter)
+        // }
+         globalContext.setCart([...cart,newProduct])
+        //  console.log(cart)
+    }
 
     return(
         <div className="shopsproduct">
@@ -47,7 +81,7 @@ const ShopsProduct = (props) => {
                     </div>
                     <div className="shopsproduct_content_information_sumadd">
                         <input type="number" value={productSum} onChange={e=>setProductSum(e.target.value)} className='sum'/>
-                        <div className="add btn">THÊM VÀO GIỎ HÀNG</div>
+                        <div className="add btn" onClick={()=>{handleAddProductToCart()}}>THÊM VÀO GIỎ HÀNG</div>
                     </div>
                     <div className="shopsproduct_content_information_set">
                         <h6 className="set_title">Discovery Set</h6>
