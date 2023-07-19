@@ -1,7 +1,9 @@
+import { useContext } from 'react'
 import {Routes, Route} from 'react-router-dom'
 
 import ShopsProductList from './ShopsProductList/ShopsProductList'
 import ShopsProduct from './ShopsProduct/ShopsProduct'
+import { GlobalContext } from '../../../../GlobalContext'
 
 import productsData from './Data/data.js'
 
@@ -10,6 +12,7 @@ import './shops.scss'
 
 
 const Shops = () => {
+    const globalContext = useContext(GlobalContext)
     return(
         <div className="shops">
             <div className="shops_poster">
