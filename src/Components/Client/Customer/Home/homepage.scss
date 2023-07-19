@@ -2,7 +2,42 @@
     width: 100%;
     opacity: 0;
     // background-color: rgb(34, 34, 34);
-
+    &_bestsale{
+        position: relative;
+        z-index: 9;
+        width: 100%;
+        padding: 50px 20px;
+        box-shadow: 0px -10px 20px 10px rgb(0, 0, 0);
+        &_title{
+            display: block;
+            padding: 20px;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+        animation: start_totop 1s 0s forwards;
+    }
+    &_portfolio{
+        position: relative;
+        width: 100%;
+        // margin-top: 50px;
+        padding: 50px 1px;
+        box-shadow: 0px -10px 20px 10px rgb(0, 0, 0);
+        &_title{
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            color: rgb(255, 255, 255);
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+    }
     animation: start_component 2s 0s forwards;
 }
 
@@ -10,5 +45,13 @@
     to{
         opacity: 1;
         background-color: rgba(0, 0, 0, 0.05)
+    }
+}
+@keyframes start_totop {
+    from{
+        margin: 20px auto;
+    }
+    to{
+        margin: 0 auto;
     }
 }

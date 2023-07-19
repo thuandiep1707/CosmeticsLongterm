@@ -1,0 +1,79 @@
+.customer_footer{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(9,9,9);
+    padding: 30px 40px;
+    height: 350px;
+    color: white;
+    // width: 100%;
+    &_imgs{
+        // display: inline-block;
+        width: 100px;
+        height: 300px;
+        margin: 0 50px 0 100px;
+        // border: 1px solid white;
+        &_img{
+            display: block;
+            max-width:  100%;
+            height: 50px;
+            margin: 0 0 10px;
+        }
+    }
+    &_contact{
+        // display: inline-block;
+        width: 400px;
+        height: 300px;
+        // border: 1px solid white;
+        &_p1{
+            font-size: 20px;
+            padding-left: 5px;
+        }
+        &_p2{
+            font-size: 13px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        &_p3{
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        &_p3s{
+            font-size: 13px;
+        }
+    }
+    &_infor{
+        display: flex;
+         justify-content: space-between;
+        width: 560px;
+        margin: 0 auto;
+        // border: 1px solid white;
+        height: 170px;
+        &_p1{
+            font-size: 20px;
+            padding-left: 5px;
+            padding-bottom: 10px;
+        }
+        &_p2{
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        
+    }
+    &_contact_icon{
+        position: absolute;
+         bottom: 40px;
+         right: 40px;
+        .fab{
+            display: inline-block;
+            font-size: 40px;
+            margin-right: 10px;
+            &:hover{
+                cursor: pointer;
+                color: rgb(49, 137, 219);
+            }
+        }
+    }
+}

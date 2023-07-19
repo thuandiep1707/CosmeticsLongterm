@@ -5,8 +5,11 @@
     opacity: 0;
     animation: start_component 2s 0s forwards;
         &_products{
+            position: relative;
+            z-index: 9;
             background-color: rgb(255, 255, 255);
             width: 1200px;
+            min-height: 300px;
             padding-top: 10px;
             margin-top: 5px;
             box-shadow: 0px 0px 20px 10px rgb(0, 0, 0);
@@ -25,7 +28,7 @@
                      margin: 0;
                      position: relative;
                       z-index: 10;
-                    // background-color: rgba(0, 0, 0, 0.1);
+                    background-color: #ffff;
                     height: 100%;                    
                     // margin-right: 20px ;
                     border: 1px solid rgb(61,61,61);
@@ -52,6 +55,8 @@
                     }
                     &_options{
                         position: absolute;
+                        z-index: 9;
+                        background-color: #ffff;
                          top:110%;
                         width: 100.58%;
                         overflow: hidden;

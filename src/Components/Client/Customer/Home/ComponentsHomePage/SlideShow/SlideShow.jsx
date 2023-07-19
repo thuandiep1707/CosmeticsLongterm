@@ -1,15 +1,14 @@
 import {Link} from 'react-router-dom'
-
-import slideData from './data';
 import './slideshow.scss'
 import { useEffect } from 'react';
 
 const SlideShow = (props) => {
-    // console.log(slideData)
-    useEffect(()=>{},[props.title])
+    const slideShow = props.slideShow
+    // console.log(slideShow)
+    useEffect(()=>{},[slideShow.title])
     return (
         <div className="slideshow">
-            <img src={props.img} alt="slide" className='slideshow_img' />
+            <img src={slideShow.img} alt="slide" className='slideshow_img' />
             <div className="slideshow_contents">
                 <div 
                     className="prev"
@@ -22,9 +21,9 @@ const SlideShow = (props) => {
                     <p>Next</p>
                 </div>
                 <div className="slideshow_contents_content">
-                    <p className="title">{props.title}</p>
-                    <p className="content">{props.content}</p>
-                    <Link to={props.url} className='link btnchitiet'>Chi tiết</Link>
+                    <p className="title">{slideShow.title}</p>
+                    <p className="content">{slideShow.content}</p>
+                    <Link to={slideShow.url} className='link btnchitiet'>Chi tiết</Link>
                 </div>
             </div>
         </div>

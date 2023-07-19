@@ -1,16 +1,16 @@
 .shopsproduct{
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+    background-color: #ffff;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 1200px;
+    box-shadow: 0px 0px 20px 10px black;
     &_content{
         display: flex;
         //  flex-direction: ;
-         justify-content: space-around;
-        background-color: #ffff;
-        margin-top: 5px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        width: 1200px;
-        box-shadow: 0px 0px 20px 10px black;
+         justify-content: space-evenly;
         &_imglist{
             display: flex;
              flex-direction: column;
@@ -136,4 +136,107 @@
             }
         }
     }
+    .shopsproduct_recommend{
+        width: 1200px;
+        height: 450px;
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgb(61,61,61);
+        // border-bottom: 1px solid rgb(61,61,61);
+        overflow: hidden;
+        position: relative;
+        &_around{
+            height: 430px;
+            display: flex;
+            position: absolute;       
+            animation: infinity_scroll 10s linear infinite;
+            &:hover{
+                animation-play-state: paused;
+            }
+            &_product{
+                display: block;
+                min-width: 280px;
+                height: 380px;
+                margin: 10px;
+                background-color: rgb(255, 255, 255);
+                // border: 1px solid rgb(61,61,61);
+                &_around{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    border-left: 2px solid rgba(61, 61, 61, 0);
+                    border-right: 2px solid rgba(61, 61, 61, 0);
+                    &::before{
+                        content: "";
+                        display: block;
+                        background-color: rgb(61,61,61);
+                        height: 2px;
+                        width: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    &::after{
+                        content: "";
+                        display: block;
+                        background-color: rgb(61,61,61);
+                        height: 2px;
+                        width: 0px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                    &_img{
+                        width: 100%;
+                    }
+                    &_name{
+                        font-size: 19px;
+                        letter-spacing: 1px;
+                    }
+                    &_producer{
+                        display: inline-block;
+                        font-size: 12px;
+                        margin: 5px 0;
+                        color: rgb(61,61,61)
+                    }
+                    &_price{
+                        display: inline-block;
+                        font-size: 13px;
+                        margin: 5px 0;
+                    }
+                    &_btn{
+                        display: inline-block;
+                        padding:5px 20px;
+                        margin: 5px auto 20px;
+                        outline: 2px solid rgb(61,61,61);
+                        color: rgb(61,61,61);
+                        font-size: 15px;
+                        letter-spacing: 2px;
+                    }
+                    &:hover,
+                    &:active{
+                        animation: hover_border_leftright 0.8s 0s forwards;
+                        &::before,
+                        &::after{
+                            animation: hover_border_topbot 0.8s 0s forwards;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
+@keyframes infinity_scroll {
+    0%{ left: 2%;}
+    10%{ left: -11%;}
+    20%{ left: -22%;}
+    30%{ left: -33%;}
+    40%{ left: -44%;}
+    50%{ left: -55%;}
+    60%{ left: -66%;}
+    70%{ left: -77%;}
+    80%{ left: -88%;}
+    90%{ left: -102%;}
+    100%{ left: 2%;}
 }
