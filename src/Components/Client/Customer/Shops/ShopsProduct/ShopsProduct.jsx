@@ -1,17 +1,18 @@
-import {useContext, useState } from 'react'
+import {useContext, useEffect, useState } from 'react'
 import {useParams, Link} from 'react-router-dom'
 
 import { GlobalContext } from '../../../../../GlobalContext'
 
 import './shopsproduct.scss'
+import { number } from 'prop-types'
 
 const ShopsProduct = (props) => {
     //lấy params
     const param = useParams()
 
     //lấy data từ context
-    const globalContext = useContext(GlobalContext)
-    const cart = globalContext.cart
+    const {cart, setCart } = useContext(GlobalContext)
+    // const cart = globalContext.cart
     
     //lấy dữ liệu
     const product = props.productsData.filter(product => product.category.name == param.styleproducts).find(product => product.id == param.id)
@@ -26,10 +27,21 @@ const ShopsProduct = (props) => {
 
     //nhận số lượng sản phẩm 
     const [productSum,setProductSum] = useState(1)
-    
     //xử lý data đưa hàng vào giỏ hàng
-    
     const handleAddProductToCart = () => {
+        let id = product.id 
+        let checkProduct = () => {
+            for (let num in cart){
+                // console.log(cart[num])
+                if (cart[num].id == id ) {
+                    return {"id": id, "quantity":cart[num].quantity}
+                }
+            }
+        }
+        let check = checkProduct()
+        var quantity = check!=null ? Number(productSum)+Number(check.quantity) : productSum
+        var cartFilter = check!=null? cart.filter(productCart => productCart.id!=check.id) : cart
+        console.log(cartFilter)
         let newProduct = {
             "id"      : product.id,
             "name"    : product.name,
@@ -39,22 +51,10 @@ const ShopsProduct = (props) => {
                 "id"     : product.category.id,
                 "name"   : product.category.name
             },
-            "quantity":productSum
+            "quantity":quantity
         }
-        // let oldProduct = cart.filter(product => product.id==newProduct.id)
-        // console.log("old>>>>>")
-        // console.log(oldProduct)
-        // if (oldProduct){
-        //     console.log("hehehe")
-        //     let cartFilter= cart.filter(product => product.id !== oldProduct.id)
-        //     console.log("cart"+oldProduct)
-        //     console.log("check>>>>>>>")
-        //     console.log(cartFilter)
-        //     // return globalContext.setCart(cartFilter)
-        // }
-         globalContext.setCart([...cart,newProduct])
-        //  console.log(cart)
-    }
+        setCart([...cartFilter,newProduct])
+}
 
     return(
         <div className="shopsproduct">
@@ -81,7 +81,7 @@ const ShopsProduct = (props) => {
                     </div>
                     <div className="shopsproduct_content_information_sumadd">
                         <input type="number" value={productSum} onChange={e=>setProductSum(e.target.value)} className='sum'/>
-                        <div className="add btn" onClick={()=>{handleAddProductToCart()}}>THÊM VÀO GIỎ HÀNG</div>
+                        <button className="add btn" onClick={()=>{handleAddProductToCart()}}>THÊM VÀO GIỎ HÀNG</button>
                     </div>
                     <div className="shopsproduct_content_information_set">
                         <h6 className="set_title">Discovery Set</h6>
@@ -101,7 +101,7 @@ const ShopsProduct = (props) => {
                                         <p className="shopsproduct_recommend_around_product_around_producer">EAU DE PARFUM</p>
                                         <h5 className="shopsproduct_recommend_around_product_around_price">{product.price}đ</h5>
                                         <Link 
-                                            to={`/shops/${product.category.name}/${product.id}`} 
+                                            to={`/customers/shops/${product.category.name}/${product.id}`} 
                                             className='link shopsproduct_recommend_around_product_around_btn'
                                             onClick={()=>{window.scrollTo({top: 530, left:0, behavior: 'smooth'})}}>XEM CHI TIẾT</Link>
                                     </div>

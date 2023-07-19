@@ -1,6 +1,7 @@
 import {Routes, Route, Link} from "react-router-dom";
 
 import Cart from './Cart/Cart'
+import PeopleNavs from "./PeopleNavs/PeopleNavs";
 
 import './header.scss';
 
@@ -68,16 +69,18 @@ const customerHeader = () => {
                         <i className="fa-solid fa-magnifying-glass"></i>
                         <input type="text" placeholder="Bạn muốn tìm sản phẩm nào?" className="customerHeader_icon_search_bar_input"/>
                     </div>
-                    <div className="link">
-                        <i className="fa-solid fa-cart-shopping icon cart"></i>
-                        <Cart/>
+                    <div className="icon_cart">
+                        <i className="fa-solid fa-cart-shopping icon "></i>
+                        <div className="main_cart">
+                            <Cart/>
+                        </div>
                     </div>
-                    <Link to="/customers/setting">
-                        <i className="fa-sharp fa-solid fa-gear icon setting"></i>
-                    </Link>
-                    <Link to="/customers/profile">
+                    <div className="icon_people">
                         <i className="fa-solid fa-user icon profile"></i>
-                    </Link>
+                        <ul className="icon_people_navs">
+                            <PeopleNavs />
+                        </ul>
+                    </div>
                 </div>
             </div>
                 <div className="space"></div>

@@ -1,9 +1,11 @@
-import { useState, createContext, useEffect} from 'react';
+import { useState, useContext, useEffect} from 'react';
 import { useNavigate,Routes, Route } from 'react-router-dom';
 
 import Login from './Login/login'
 import Admin from './Client/Admin/index'
 import Customer from './Client/Customer/index';
+import { GlobalContext } from '../GlobalContext';
+
 import './index.scss';
 
 const Index = () => {

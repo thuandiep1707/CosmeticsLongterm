@@ -6,7 +6,7 @@ const Product = (props) => {
     const product = props.product
     const index = props.index
     // console.log(product)
-    let url = `/shops/${product.category.name}/${product.id}`
+    let url = `/customers/shops/${product.category.name}/${product.id}`
     // console.log(product.img[0])
     return (
         <div key={index} className="shop_product">

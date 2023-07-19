@@ -5,7 +5,7 @@ import data from './Data/data.js'
 const GlobalContext = createContext()
 
 const GlobalProvider = ({ children }) =>{
-    const [token, setToken] = useState()
+    const [token, setToken] = useState('axbycz')
     const [cart, setCart] = useState([
         {
             "id"      : data[8].id,

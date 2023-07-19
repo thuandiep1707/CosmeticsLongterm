@@ -116,7 +116,9 @@
         padding-left: 50px;
         &_search_bar{
             display: flex;
-            padding: 0 5px;
+            padding: 0 15px;
+            position: absolute;
+            right: 110px;
             align-items: center;
             border: 2px solid black;
             width: 250px;
@@ -137,6 +139,111 @@
             margin:0 10px;
             font-size: 15px;
             color: rgb(61, 61, 61);
+            cursor: pointer;
+        }
+        .icon_cart{
+            width: 30px;
+            height: 30px;
+            transition: all 0.5s linear;
+            position: absolute;
+            z-index: 11;
+            right: 70px;
+            top: 17px;
+            .fa-cart-shopping{
+                font-size: 25px;
+            }
+            .main_cart{
+                display: block;
+                 z-index: 12;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+            }
+            &:hover,
+            &:active{
+                top: 5px;
+                right: 5px;
+                width: 380px;
+                height: 535px;
+                background-color: #ffffff;
+                background-color: rgb(232, 232, 232);
+                border-radius: 5px;
+                overflow: hidden;
+                .fa-cart-shopping{
+                    font-size: 15px;
+                    display: inline-block;
+                    position: relative;
+                    margin: 10px 10px 5px 10px;
+                    animation: pushcart 6s 0s linear infinite;
+                    &::after{
+                        content: "Chốt đơn liền tay, hàng về liền tay";
+                        display: inline;
+                        margin-left: 10px;
+                        font-family: 'Courier New', Courier, monospace;
+                        width: 500px;
+                    }
+                }
+                .main_cart{
+                    width: 380px;
+                    height: 500px;
+                    // position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    opacity: 1;
+                }   
+            }
+        }
+        .icon_people{
+            display: block;
+            position: absolute;
+            z-index: 10;
+            top: 10px;
+            right: 0px;
+            height: 40px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding-top: 5px;
+            transition: all 0.2s linear;
+            &:hover,
+            &:active{
+                background-color: #ebebeb;
+                .icon_people_navs{
+                    width: 100px;
+                    height: 87px;
+                    opacity: 1;
+                }
+            }
+            .profile{
+                font-size: 25px;
+            }
+            &_navs{
+                display: block;
+                // display: none;
+                position: fixed;
+                right: -1px;
+                top: 50px;
+                background-color: #ebebeb;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: all 0.2s linear;
+                &_nav{
+                    display: block;
+                    text-align: right;
+                    padding: 5px 15px;
+                    margin: 1px;
+                    font-size: 15px;
+                    &:hover{
+                        background-color: rgb(197, 197, 197);
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
 }
@@ -153,5 +260,19 @@
     }
     to{
         height: 175px;
+    }
+}
+
+@keyframes pushcart {
+    0%{
+        // opacity: 1;
+        right: -500px;
+    }
+    50%{
+        right: 0px;
+    }
+    100%{
+        right: 500px;
+        // opacity: 0;
     }
 }
