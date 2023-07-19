@@ -17,14 +17,14 @@ const customerMainPage = () => {
         <div className="customerMain">
             <Header />
             <Routes>
-                <Route path="/" element={<HomeMain />} />
-                <Route path="/shops/*" element={<Shops />} />
-                <Route path="/blogs" element={<BlogsMain />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/setting" element={<Setting />} />
-                <Route path="/profile" element={<Profile />} />
-            </Routes>
+                <Route path="/*" element={<HomeMain />} />
+                <Route path="shops/*" element={<Shops />} />
+                <Route path="blogs" element={<BlogsMain />} />
+                <Route path="portfolio" element={<Portfolio />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="setting" element={<Setting />} />
+                <Route path="profile" element={<Profile />} />
+            </Routes>   
             <Footer />
         </div>
     )

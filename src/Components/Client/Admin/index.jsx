@@ -13,9 +13,7 @@ import './index.scss'
 const AdminMainPage = () => {
     return(
         <div className="adminMain">
-            <Routes>
-
-            </Routes>
+            ad nè :V
         </div>
     )
 }

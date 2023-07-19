@@ -8,7 +8,7 @@ const customerHeader = () => {
     return(
         <div>
             <div className="customerHeader">
-                <Link to="/" className="logo link">
+                <Link to="/customers" className="logo link">
                     <div className="logo_square"></div>
                     <h3 className="logo_brand">
                         Long term
@@ -17,48 +17,48 @@ const customerHeader = () => {
                 <ul className='customerHeader_nav'>
                     <li>
                         <h3 className="nav_title">
-                            <Link to="/shops/general" className="link">SHOPS</Link>
+                            <Link to="/customers/shops/general" className="link">SHOPS</Link>
                         </h3>
                         <nav className="menu shop">
-                            <Link to="/shops/lipstick" className="page lipstick">Lipstick</Link>
-                            <Link to="/shops/serum" className="page serum">Serum</Link>
-                            <Link to="/shops/toner" className="page toner">Toner</Link>
-                            <Link to="/shops/perfume" className="page perfume">Perfume</Link>
-                            <Link to="/shops/makeup" className="page makeup">Make Up</Link>
+                            <Link to="/customers/shops/lipstick" className="page lipstick">Lipstick</Link>
+                            <Link to="/customers/shops/serum" className="page serum">Serum</Link>
+                            <Link to="/customers/shops/toner" className="page toner">Toner</Link>
+                            <Link to="/customers/shops/perfume" className="page perfume">Perfume</Link>
+                            <Link to="/customers/shops/makeup" className="page makeup">Make Up</Link>
                         </nav>
                     </li>
                     <li>
                         <h3 className="nav_title">
-                            <Link to="/blogs" className="link">BLOGS</Link>
+                            <Link to="/customers/blogs" className="link">BLOGS</Link>
                         </h3>
                         <nav className="menu blog">
-                            <Link to="/blogs/standard" className="page standard">Standard</Link>
-                            <Link to="/blogs/centered" className="page centered">Centered</Link>
-                            <Link to="/blogs/nosidebar" className="page nosidebar">No Sidebar</Link>
-                            <Link to="/blogs/audio" className="page audio">Audio</Link>
-                            <Link to="/blogs/quote" className="page quote">Qoute</Link>
+                            <Link to="/customers/blogs/standard" className="page standard">Standard</Link>
+                            <Link to="/customers/blogs/centered" className="page centered">Centered</Link>
+                            <Link to="/customers/blogs/nosidebar" className="page nosidebar">No Sidebar</Link>
+                            <Link to="/customers/blogs/audio" className="page audio">Audio</Link>
+                            <Link to="/customers/blogs/quote" className="page quote">Qoute</Link>
                         </nav>
                     </li>
                     <li>
                         <h3 className="nav_title">
-                            <Link to="/pages" className="link">PAGES</Link>
+                            <Link to="/customers/pages" className="link">PAGES</Link>
                         </h3>
                         <nav className="menu page">
-                            <Link to="/pages/aboutus" className="page aboutus">About Us</Link>
-                            <Link to="/pages/ourteam" className="page ourteam">Our Team</Link>
-                            <Link to="/pages/FAQpage" className="page faqpage">FAQ Page</Link>
-                            <Link to="/pages/comingsoon" className="page comingsoon">Coming Soon</Link>
-                            <Link to="/pages/pricingplans" className="page pricingplans">Pricing Plans</Link>
+                            <Link to="/customers/pages/aboutus" className="page aboutus">About Us</Link>
+                            <Link to="/customers/pages/ourteam" className="page ourteam">Our Team</Link>
+                            <Link to="/customers/pages/FAQpage" className="page faqpage">FAQ Page</Link>
+                            <Link to="/customers/pages/comingsoon" className="page comingsoon">Coming Soon</Link>
+                            <Link to="/customers/pages/pricingplans" className="page pricingplans">Pricing Plans</Link>
                         </nav>
                     </li>
                     <li>
                         <h3 className="nav_title">
-                            <Link to="/portfolio" className="link">PORTFOLIO</Link>
+                            <Link to="/customers/portfolio" className="link">PORTFOLIO</Link>
                         </h3>
                     </li>
                     <li>
                         <h3 className="nav_title">
-                            <Link to="/contact" className="link">CONTACT</Link>
+                            <Link to="/customers/contact" className="link">CONTACT</Link>
                         </h3>
                     </li>
                 </ul>
@@ -72,10 +72,10 @@ const customerHeader = () => {
                         <i className="fa-solid fa-cart-shopping icon cart"></i>
                         <Cart/>
                     </div>
-                    <Link to="/setting">
+                    <Link to="/customers/setting">
                         <i className="fa-sharp fa-solid fa-gear icon setting"></i>
                     </Link>
-                    <Link to="/profile">
+                    <Link to="/customers/profile">
                         <i className="fa-solid fa-user icon profile"></i>
                     </Link>
                 </div>
