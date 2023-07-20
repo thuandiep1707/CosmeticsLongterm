@@ -5,7 +5,8 @@ import data from './Data/data.js'
 const GlobalContext = createContext()
 
 const GlobalProvider = ({ children }) =>{
-    const [token, setToken] = useState('axbycz')
+    const [token, setToken] = useState()
+    const [username, setUsername] = useState()
     const [cart, setCart] = useState([
         {
             "id"      : data[8].id,
@@ -26,7 +27,9 @@ const GlobalProvider = ({ children }) =>{
         cart,
         setCart,
         productsList,
-        setProductsList
+        setProductsList,
+        username,
+        setUsername
     }
     return (
         <GlobalContext.Provider value={value}>

@@ -9,9 +9,14 @@ import { GlobalContext } from '../GlobalContext';
 import './index.scss';
 
 const Index = () => {
+    const navigate = useNavigate()
+    useEffect(()=>{
+        navigate('/customers')
+    },[])
+
     return(
         <Routes>
-            <Route path='/' element={<Login/>} />
+            <Route path='/login' element={<Login/>} />
             <Route path='/admin/*' element={<Admin/>}/>
             <Route path='/customers/*'element={<Customer/>}/>
         </Routes>

@@ -1,14 +1,14 @@
 import { useState } from 'react'
+import { useNavigate, Routes, Route } from 'react-router-dom'
 import Index from './Components/index.jsx'
 import './App.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const navigate = useNavigate()
   return (
-    <>
-    <Index />
-    </>
+    <Routes>
+      <Route path="/*" element={<Index />}/>
+    </Routes>
   )
 }
 

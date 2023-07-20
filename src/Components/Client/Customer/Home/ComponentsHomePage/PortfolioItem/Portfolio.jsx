@@ -3,8 +3,7 @@
 import "./portfolio.scss"
 
 
-export default (props) => {
-    const portfolio = props.portfolio
+export default ({portfolio}) => {
     return (
         <div className="portfolio">
             <img src={portfolio.img} alt="" className="portfolio_img" />

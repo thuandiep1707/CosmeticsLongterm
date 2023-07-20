@@ -153,7 +153,7 @@ const ShopsProducts = (props) => {
                     </div>
                     <div className="shopsmain_products_list">
                         {productFilter.map((product, index) => {
-                            return <Product product={product} index={index}/>})}
+                            return <Product product={product} key={index}/>})}
                     </div>
             </section>
             {/* <Routes>

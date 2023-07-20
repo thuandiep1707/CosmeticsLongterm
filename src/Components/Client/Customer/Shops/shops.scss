@@ -8,28 +8,29 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 500px;
+            height: 400px;
             width: 100%;
             &_logo{
                 // position: absolute;
                 z-index: 10;
-                height: 60px;
+                height: 50px;
                 display: flex;
                 align-items: center;
                 scale: 3;
                 &_square{
                     display: inline-block;
                     margin: 5px;
-                    height: 50px;
-                    width: 50px;
-                    border: 5px solid #ffffff;
+                    height: 45px;
+                    width: 45px;
+                    border: 5px solid #ffffffb5;
                     border-radius: 20%;
                 }
                 &_brand{
                     display: inline-block;
-                    color:  #ffffff;
-                    font-size: 35px;
-                    letter-spacing: 5px;
+                    color:  #ffffffb5;
+                    font-size: 32px;
+                    letter-spacing: 8px;
+                    margin-left: 8px;
                 }
             }
         }

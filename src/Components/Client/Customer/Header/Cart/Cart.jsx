@@ -5,21 +5,34 @@ import { GlobalContext } from '../../../../../GlobalContext'
 
 import './cart.scss'
 
-export default () => {
+const Cart = () => {
     const navigate = useNavigate()
-    const {cart, setCart} = useContext(GlobalContext)
+    const {cart, setCart, token} = useContext(GlobalContext)
     const handleRemoveItem = (product) => {
         setCart(
             cart.filter(item => item!=product )
         )
     }
     const handleGoToPay = () => {
-        if (cart[0] == null) {
-            return
+        if (token==null){
+            navigate("/login")
+        } else {
+            if (cart[0] == null) {
+                return
+            }
+            return navigate("/customers/pay")
         }
-        return navigate("/customers/pay")
     }
-
+    if (cart[0]==null){
+        return(
+            <div className="main_cart">
+                <div className="main_cart_around"
+                style={{textAlign:"center"}}>
+                    Giỏ hàng rỗng
+                </div>
+            </div>
+        )
+    }
     return(
         <div className="main_cart">
             <div className="main_cart_around">
@@ -37,7 +50,7 @@ export default () => {
                                         <p className="main_cart_around_product_infor_quantity">Số lượng: {product.quantity}</p>
                                     </div>
                                 </Link>
-                                <i class="fa-solid fa-x main_cart_around_product_del_btn"
+                                <i className="fa-solid fa-x main_cart_around_product_del_btn"
                                     onClick={()=>{handleRemoveItem(product)}}/>
                             </div>
                         )
@@ -48,4 +61,7 @@ export default () => {
                 <button className="main_cart_btn" onClick={()=>{handleGoToPay()}}>Thanh toán</button>
         </div>
     )
+    
 }
+
+export default Cart

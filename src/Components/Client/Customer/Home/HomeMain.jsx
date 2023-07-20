@@ -1,6 +1,6 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
-import SlideShow from './ComponentsHomePage/SlideShow/Slideshow';
+import SlideShow from './ComponentsHomePage/SlideShow/SlideShow';
 import ProductBestSale from './ComponentsHomePage/ProductsBestSale/ProductsBestSale';
 import Portfolio from './ComponentsHomePage/PortfolioItem/Portfolio';
 
@@ -9,6 +9,9 @@ import Data from './Data/data.js';
 import './homepage.scss'
 
 const HomeMain = () => {
+    useEffect(
+        ()=>{
+            window.scrollTo({top:0, left:0, behavior:"smooth"})})
     //Xử lý cho phần slide
     const [slideNum,changeSlideNum] = useState(3);
     const handleChangeNum = (value) => {
@@ -31,11 +34,11 @@ const HomeMain = () => {
             slideShow={Data.slideShow[slideNum]}/>
             <div className="homepage_bestsale">
                 <div className="homepage_bestsale_title">SẢN PHẨM NỔI BẬT</div>
-                {Data.bestSale.map((product,index) => {return <ProductBestSale product={product} index={index}/>})}
+                {Data.bestSale.map((product,index) => {return <ProductBestSale product={product} key={index}/>})}
             </div>
             <div className="homepage_portfolio">
                 <div className="homepage_portfolio_title title">DANH MỤC ĐẦU TƯ</div>
-                {Data.portfolio.map((portfolio,index)=>{return <Portfolio portfolio={portfolio} index={index}/>})}
+                {Data.portfolio.map((portfolio,index)=>{return <Portfolio portfolio={portfolio} key={index}/>})}
             </div>
         </div>
     )

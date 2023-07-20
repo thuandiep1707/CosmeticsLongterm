@@ -4,18 +4,25 @@ import {useParams, Link} from 'react-router-dom'
 import { GlobalContext } from '../../../../../GlobalContext'
 
 import './shopsproduct.scss'
-import { number } from 'prop-types'
 
-const ShopsProduct = (props) => {
+const ShopsProduct = ({productsData}) => {
     //lấy params
     const param = useParams()
+    
+    //lấy dữ liệu
+    const productRecommend = productsData.filter(product =>product.category.name == param.styleproducts)
+    const product = productRecommend.find(product => product.id == param.id)
+    //cuôn trang
+    useEffect(
+        ()=>{
+            window.scrollTo({top:420, left:0, behavior:"smooth"})},[product])
+    useEffect(
+        ()=>{
+            window.scrollTo({top:0, left:0, behavior:"smooth"})},[])
+            
 
     //lấy data từ context
     const {cart, setCart } = useContext(GlobalContext)
-    // const cart = globalContext.cart
-    
-    //lấy dữ liệu
-    const product = props.productsData.filter(product => product.category.name == param.styleproducts).find(product => product.id == param.id)
     
     //xử lý thay đổi img
     const [imgNum, setImgNum] = useState(0)
@@ -24,15 +31,15 @@ const ShopsProduct = (props) => {
         if (num > product.img.length-1){return setImgNum(0)} else if (num < 0) {return setImgNum(product.img.length-1)}
         return setImgNum(num)
     }
-
     //nhận số lượng sản phẩm 
     const [productSum,setProductSum] = useState(1)
+    
+    
     //xử lý data đưa hàng vào giỏ hàng
     const handleAddProductToCart = () => {
         let id = product.id 
         let checkProduct = () => {
             for (let num in cart){
-                // console.log(cart[num])
                 if (cart[num].id == id ) {
                     return {"id": id, "quantity":cart[num].quantity}
                 }
@@ -41,7 +48,6 @@ const ShopsProduct = (props) => {
         let check = checkProduct()
         var quantity = check!=null ? Number(productSum)+Number(check.quantity) : productSum
         var cartFilter = check!=null? cart.filter(productCart => productCart.id!=check.id) : cart
-        console.log(cartFilter)
         let newProduct = {
             "id"      : product.id,
             "name"    : product.name,
@@ -92,7 +98,7 @@ const ShopsProduct = (props) => {
             <div className="shopsproduct_recommend">
                 <div className="shopsproduct_recommend_around">
                     {
-                        props.productsData.map((product,index)=>{
+                        productRecommend.map((product,index)=>{
                             return(
                                 <div key={index} className="shopsproduct_recommend_around_product">
                                     <div className="shopsproduct_recommend_around_product_around">
@@ -103,7 +109,7 @@ const ShopsProduct = (props) => {
                                         <Link 
                                             to={`/customers/shops/${product.category.name}/${product.id}`} 
                                             className='link shopsproduct_recommend_around_product_around_btn'
-                                            onClick={()=>{window.scrollTo({top: 530, left:0, behavior: 'smooth'})}}>XEM CHI TIẾT</Link>
+                                            >XEM CHI TIẾT</Link>
                                     </div>
                                 </div>
                             )

@@ -1,4 +1,3 @@
-import {useContext} from 'react'
 import {Routes, Route, useNavigate} from 'react-router-dom'
 
 import Header from './Header/Header'
@@ -11,16 +10,10 @@ import Setting from './Setting/Setting'
 import Profile from './Profile/Profile'
 import Pay from './Pay/Pay'
 import Footer from './Footer/Footer'
-import { GlobalContext } from '../../../GlobalContext'
 
 import './index.scss'
 
 const customerMainPage = () => {
-    const {token} = useContext(GlobalContext)
-    const navigate = useNavigate()
-    if (token==null){
-        navigate("/")
-    }
     return (
         <div className="customerMain">
             <Header />

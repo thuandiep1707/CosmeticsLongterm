@@ -71,9 +71,7 @@ const customerHeader = () => {
                     </div>
                     <div className="icon_cart">
                         <i className="fa-solid fa-cart-shopping icon "></i>
-                        <div className="main_cart">
                             <Cart/>
-                        </div>
                     </div>
                     <div className="icon_people">
                         <i className="fa-solid fa-user icon profile"></i>

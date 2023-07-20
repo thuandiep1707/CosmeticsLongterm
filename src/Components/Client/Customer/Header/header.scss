@@ -154,43 +154,38 @@
             }
             .main_cart{
                 display: block;
-                 z-index: 12;
+                z-index: 12;
+                position: absolute;
+                top: 2px;
+                right: 0;
                 width: 0;
                 height: 0;
-                overflow: hidden;
+                border-radius: 5px;
                 opacity: 0;
+                transition: all 0.25s linear;
             }
             &:hover,
             &:active{
-                top: 5px;
-                right: 5px;
-                width: 380px;
-                height: 535px;
-                background-color: #ffffff;
-                background-color: rgb(232, 232, 232);
-                border-radius: 5px;
-                overflow: hidden;
-                .fa-cart-shopping{
-                    font-size: 15px;
-                    display: inline-block;
-                    position: relative;
-                    margin: 10px 10px 5px 10px;
-                    animation: pushcart 6s 0s linear infinite;
-                    &::after{
-                        content: "Chốt đơn liền tay, hàng về liền tay";
-                        display: inline;
-                        margin-left: 10px;
-                        font-family: 'Courier New', Courier, monospace;
-                        width: 500px;
-                    }
-                }
                 .main_cart{
+                    background-color: #d7d7d7;
                     width: 380px;
                     height: 500px;
-                    // position: absolute;
-                    top: 5px;
-                    right: 5px;
+                    top: 45px;
+                    right: -67px;
                     opacity: 1;
+                    &::before{
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: -30px;
+                        left: 0;
+                        width: 380px;
+                        height: 35px;
+                        z-index: 20;
+                    }
+                    .main_cart_btn{
+                        display: initial;
+                    }
                 }   
             }
         }
@@ -201,17 +196,26 @@
             top: 10px;
             right: 0px;
             height: 40px;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
             padding-top: 5px;
             transition: all 0.2s linear;
             &:hover,
             &:active{
-                background-color: #ebebeb;
+                // background-color: #ebebeb;
                 .icon_people_navs{
+                    top: 65px;
+                    right: 5px;
                     width: 100px;
                     height: 87px;
                     opacity: 1;
+                    &_nav::before{
+                        content: "";
+                        display: block;
+                        height: 35px;
+                        width: 100px;
+                        position: fixed;
+                         top: 35px;
+                         right: 5px;
+                    }
                 }
             }
             .profile{
@@ -224,9 +228,7 @@
                 right: -1px;
                 top: 50px;
                 background-color: #ebebeb;
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
+                border-radius: 5px;
                 width: 0;
                 height: 0;
                 overflow: hidden;
@@ -238,6 +240,7 @@
                     padding: 5px 15px;
                     margin: 1px;
                     font-size: 15px;
+                    border-radius: 5px;
                     &:hover{
                         background-color: rgb(197, 197, 197);
                         cursor: pointer;
@@ -260,19 +263,5 @@
     }
     to{
         height: 175px;
-    }
-}
-
-@keyframes pushcart {
-    0%{
-        // opacity: 1;
-        right: -500px;
-    }
-    50%{
-        right: 0px;
-    }
-    100%{
-        right: 500px;
-        // opacity: 0;
     }
 }

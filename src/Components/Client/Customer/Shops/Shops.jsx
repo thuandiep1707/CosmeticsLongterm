@@ -1,5 +1,5 @@
-import { useContext } from 'react'
-import {Routes, Route} from 'react-router-dom'
+import { useContext, useEffect } from 'react'
+import {Routes, Route, useParams} from 'react-router-dom'
 
 import ShopsProductList from './ShopsProductList/ShopsProductList'
 import ShopsProduct from './ShopsProduct/ShopsProduct'
@@ -14,6 +14,9 @@ import './shops.scss'
 const Shops = () => {
     const globalContext = useContext(GlobalContext)
     const productsData = globalContext.productsList
+    useEffect(
+        ()=>{
+            window.scrollTo({top:0, left:0, behavior:"smooth"})},[])
     return(
         <div className="shops">
             <div className="shops_poster">

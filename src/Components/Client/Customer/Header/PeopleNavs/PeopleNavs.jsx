@@ -11,8 +11,7 @@ const PeopleNavs = () => {
     const handleLogOut = () => {
         setCart([])
         setToken(null)
-        navigate("/")
-
+        navigate("/login")
     }
     return(
         <>
