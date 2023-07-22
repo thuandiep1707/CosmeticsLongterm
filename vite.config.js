@@ -9,10 +9,11 @@ export default defineConfig({
   resolve: {
     alias: {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "includes":["src"]
   }
 }
   }
