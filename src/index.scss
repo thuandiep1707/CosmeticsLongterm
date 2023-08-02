@@ -1,0 +1,29 @@
+// src/_corners.scss
+$browse: #B38B59;
+$green: #113E21;
+$gray: #F0F0F0;
+$white: #FEFEFE;
+::-webkit-scrollbar {
+ display: none;
+} 
+// :root {
+
+// }
+
+li, input{
+  all: unset;
+}
+.link{
+  color: unset;
+  text-decoration: unset;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $white;
+}
+
