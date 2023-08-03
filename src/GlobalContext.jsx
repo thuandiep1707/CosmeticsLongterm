@@ -1,6 +1,7 @@
 import {createContext, useState,} from 'react'
 
-import data from './assets/data/data.js'
+import productsData from './assets/productsData.js'
+import {slideShow,bestSales,portfolio} from './assets/homeData.js'
 
 const GlobalContext = createContext()
 
@@ -9,7 +10,10 @@ const GlobalProvider = ({children}) => {
         console.log(product_name)
     }
     const value = {
-        data,
+        productsData,
+        slideShow,
+        bestSales,
+        portfolio,
         search
     }
     return (

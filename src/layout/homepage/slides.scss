@@ -1,0 +1,95 @@
+.slides{
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    height: 700px;
+    &_img{
+        width: 100%;
+        height: 100%;
+        animation: start_img 1s forwards;
+        opacity: 0;
+    }
+    &_content{
+        display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+        position: absolute;
+         top: 0;
+         left: 0;
+        background-color: #00000046;
+        height: 650px;
+        padding-top: 50px;
+        width: 100%;
+        color: #ffffff;
+        opacity: 0;
+        animation: start_content 0.5s forwards;
+        &_title{
+            font-size: 3em;
+            margin-top: -200px;
+        }
+        &_description{
+            font-size: 1.5em;
+            width: 40%;
+            text-align: center;
+            margin-top: -30px;
+        }
+    }
+    &_control{
+        height: 100%;
+        width: 100%;
+        &_prev,
+        &_next{
+            all: unset;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+            height: 100%;
+            width: 150px;
+            position: absolute;
+             top:0;
+            transition: 0.2s linear;
+            &_icon{
+                color: #ffffff88;
+                font-size: 2rem;
+                transition: 0.2s linear;
+            }
+            &:hover &_icon,
+            &:active &_icon{
+                color: #ffffff;
+            }
+        }
+        &_prev{
+            left: 0;
+            background-image: linear-gradient(90deg, rgba(61, 61, 61, 0.514), rgba(61, 61, 61, 0) );
+            &:hover,
+            &:active{
+                background-image: unset;
+                box-shadow: 10px 0 10px 0 rgba(248, 248, 248, 0.048);
+            }
+        }
+        &_next{
+            right: 0;
+            background-image: linear-gradient(90deg, rgba(61, 61, 61, 0), rgba(61, 61, 61, 0.514) );
+            &:hover,
+            &:active{
+                background-image: unset;
+                box-shadow: -10px 0 10px 0 rgba(248, 248, 248, 0.048);
+            }
+        }
+    }
+}
+
+@keyframes start_img {
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes start_content {
+    to{
+        height: 100%;
+        padding-top: unset;
+        opacity: 1;
+    }
+}
