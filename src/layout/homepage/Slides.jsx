@@ -4,7 +4,7 @@ import {Slide1,Slide2} from './SlideChild'
 import './slides.scss'
 
 const Slides = ({slideShow})=>{
-    const [numSlide, setNumSlide] = useState(1)
+    const [numSlide, setNumSlide] = useState(3)
     const [changeSlide, setChangeSlide] = useState(true)
     const handleChangeSlide = (value) => {
         let num = numSlide + value

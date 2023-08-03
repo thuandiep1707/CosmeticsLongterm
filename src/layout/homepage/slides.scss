@@ -26,7 +26,7 @@
         animation: start_content 0.5s forwards;
         &_title{
             font-size: 3em;
-            margin-top: -200px;
+            margin-top: -160px;
         }
         &_description{
             font-size: 1.5em;
@@ -38,6 +38,8 @@
     &_control{
         height: 100%;
         width: 100%;
+        position: absolute;
+        top:0;
         &_prev,
         &_next{
             all: unset;

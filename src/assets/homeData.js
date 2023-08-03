@@ -5,11 +5,11 @@ import serum from './img/home/serum.jpeg'
 import toner from './img/home/toner.jpeg'
 import makeup from './img/home/makeup.jpeg'
 //bestsale
-import ComeOut1 from "./img/home/ComeOut1.jpg"
-import Creation81 from "./img/home/Creation81.jpg"
-import BelovedJ1 from "./img/home/BelovedJ1.jpg"
-import Edelweiss1 from "./img/home/Edelweiss1.jpg"
-import ImYour1 from "./img/home/ImYour1.jpg"
+// import ComeOut1 from "./img/home/ComeOut1.jpg"
+// import Creation81 from "./img/home/Creation81.jpg"
+// import BelovedJ1 from "./img/home/BelovedJ1.jpg"
+// import Edelweiss1 from "./img/home/Edelweiss1.jpg"
+// import ImYour1 from "./img/home/ImYour1.jpg"
 //portfolio
 import portfolio1 from './img/home/portfolio1.jpg'
 import portfolio2 from './img/home/portfolio2.jpg'
@@ -53,61 +53,36 @@ const bestSales = [
         "id"          :"01",
         "name"        :"COME OUT",
         "price"       :5300000,
-        "img"         :[ComeOut1],
-        "propoties"   :{
-            "type"        :"Product",
-            "collection"  :"Mùa Xuân",
-            "description" :"Whoever You Are, Whoever I Am? Bạn và tôi, ta đã từng là ai? Và sẽ là ai ?Come out mở đầu với cam Neroli bung toả đầy mạnh mẽ khắp không gian, điểm nhẹ sự khắc khoải từ thảo mộc, như vài nét chấm phá cuộc sống đầy màu sắc. Mùi hương cháy phừng phực mà vẫn mát xanh như tuổi trẻ, ngây ngô trong trẻo nhưng cũng đầy ắp niềm kiêu hãnh nhiệt thành. Kết nối bằng một chút chua nhẹ của trái cây nhiệt đới, Come out bỗng nhiên trầm mặc giữa vườn hoa tĩnh lặng với nhài, mẫu đơn và hoa hồng phảng phất. Khép lại bằng hỗn hợp xạ hương và rêu, gỗ, mùi hương đưa tâm trí ta trở về với thiên nhiên thuần khiết, với nơi chốn bình yên mà nhìn rõ mình từ trong sâu thẳm.Come out và Lê Kinh Tài có nhiều nét tương đồng. Dù là tranh, hay mùi hương, trái ngược với những gì phóng khoáng và cuồng nhiệt như ấn tượng ban đầu, sự hiện thân của một tâm hồn trưởng thành với nhiều vết xước và những câu chuyện còn bỏ ngỏ sẽ là điều thôi thúc bạn khám phá.Phong cách: Kiêu hãnh, sâu sắc, cá tính",
-                    },
-        "category"    :{
-                        "id":"perfume",
-                        "name":"perfume"
-                    }
+        "img"         :["http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq"],
+        "categoryName"  : "perfume"
     },
     {
         "id"          :"02",
         "name"        :"CREATION 8",
         "price"       :2500000,
-        "img"         :[Creation81],
-        "propoties"   :{
-            "type"        :"Product",
-            "collection"  :"Mùa Hạ",
-            "description" :"Mở đầu chuỗi hương đậm chất trái cây nhiệt đới sảng khoái với bưởi và quýt hồng, Creation8 - sáng tạo hương thứ 8 của BST Jillian dường như đã mang đến làn gió mát rượi thổi từ vùng biển trong xanh nước Ý, sảng khoái và mạnh mẽ đánh thức mọi giác quan. Khéo léo đan xen cùng bạc hà the mát, cùng chút cay nồng của các loại gia vị là hương thơm hoa hồng dịu dàng kín kẽ. Đó là sự kết hợp kì diệu gợi nên cảm giác thỏa mãn xa hoa, như một giấc mơ về kỳ nghỉ trên chuyến du thuyền và ngắm nhìn hòn đảo Capri xinh đẹp. Creation8 là mùi hương phù hợp với xu hướng hiện đại, với lối sống phóng khoáng và không chút e dè thể hiện bản thân. Khi hai tầng hương đầu dần khép lại, hỗn hợp gỗ tuyết tùng và xạ hương nam tính lịch lãm xuất hiện, khắc họa rõ nét một Creation8 trưởng thành đằng sau vẻ ngoài ồn ào náo nhiệt. Chuỗi hương kết thúc bằng một chút ướt át của rêu sồi, mùi thơm đặc trưng của da thuộc và thuốc lá. Trái ngược với khởi đầu cuồng nhiệt cháy bỏng, điều cô đọng mà Creation8 để lại là một cái tôi đơn giản và khác biệt như chính tên gọi của mình: Sáng tạo thứ 8.Nhóm hương: Woody Oriental (Gỗ Phương Đông)",
-                    },
-        "category"    :{
-                        "id":"perfume",
-                        "name":"perfume"
-                    }
+        "img"         :["http://drive.google.com/uc?export=view&id=13rwrd15e76AYtelBowQLZOKofKtNmbeP"],
+        "categoryName"  : "perfume"
     },
     {
         "id"          :"03",
         "name"        :"BELOVED J",
         "price"       :2500000,
-        "img"         :[BelovedJ1],
-        "propoties"   :{
-            "type"        :"Product",
-            "collection"  :"Mùa Thu",
-            "description" :"Beloved J là một tác phẩm nghệ thuật, là khu vườn nhỏ đầy hoa lặng lẽ nép mình giữa lòng thành phố, là âm nhạc phức điệu của Bach, là những họa tiết đối xứng trên ô gạch có tuổi đời chạm mốc trăm năm, là chiếc váy duyên dáng của người phụ nữ chơi vĩ cầm, là những nét đẹp cổ điển được xếp đặt tinh tế trong từng note hương. Nhóm hương: Flower mix Fresh",
-                    },
-        "category"    :{
-                        "id":"perfume",
-                        "name":"perfume"
-                    }
+        "img"         :["http://drive.google.com/uc?export=view&id=13_ke5kUcnSSAO0wN4kPOZC29QvvNAVtO"],
+        "categoryName"  : "perfume"
     },
     {
         "id"          :"04",
         "name"        :"EDELWEISS",
         "price"       :2250000,
-        "img"         :[Edelweiss1],
-        "propoties"   :{
-            "type"        :"Product",
-            "collection"  :"Mùa Đông",
-            "description" :"Edelweiss bộc lộ cá tính riêng biệt ngay từ phút đầu tiên với mùi hương tươi mát và sắc sảo. Nét dịu dàng của hoa nhung tuyết ôm lấy các nốt hương trái cây để rồi tone patchouli âm thầm đẩy cảm xúc lên đến đỉnh điểm như một lời gọi mời hấp dẫn. Edelweiss được đánh giá là một mùi hương tinh khiết và trong trẻo, mềm mại nhưng mãnh liệt tột cùng - như sức sống của loài hoa trắng muốt trên các dãy núi cao giá lạnh.Nhóm hương: Flower mix Fruity",
-                    },
-        "category"    :{
-                        "id":"perfume",
-                        "name":"perfume"
-                    }
+        "img"         :["http://drive.google.com/uc?export=view&id=1JD4GWTGhH2vsYhREuyl07QQQ3Tc4-39Y"],
+        "categoryName"  : "perfume"
+    },
+    {
+        "id"          :"05",
+        "name"        :"I'M YOURS",
+        "price"       :1200000,
+        "img"         :["http://drive.google.com/uc?export=view&id=13BuNyOSckZ4QTnCEWJSwFD28ePsQSZop"],
+        "categoryName"  : "perfume"
     }
 ]
 
