@@ -2,6 +2,7 @@ import {createContext, useState,} from 'react'
 
 import productsData from './assets/productsData.js'
 import {slideShow,bestSales,portfolio} from './assets/homeData.js'
+import footerData from './assets/footerData.js'
 
 const GlobalContext = createContext()
 
@@ -14,6 +15,7 @@ const GlobalProvider = ({children}) => {
         slideShow,
         bestSales,
         portfolio,
+        footerData,
         search
     }
     return (

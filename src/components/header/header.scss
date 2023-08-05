@@ -6,7 +6,6 @@ $white: #FEFEFE;
     display: block;
     height: 84px;
     width: 100%;
-    background-color: #666666;
 }
 .endow{
     position: fixed;
@@ -30,7 +29,7 @@ $white: #FEFEFE;
      z-index: 10;
     height: 55px;
     width: 100%;
-    background-color: #cfcfcf;
+    background-color: $gray;
     border-bottom: 1px white solid;
     color: $green;
     // border: 1px $green solid;
@@ -54,7 +53,7 @@ $white: #FEFEFE;
                 display: block;
                 height: 36px;
                 width: 36px;
-                background-color: #bebebe;
+                background-color: $gray;
                 position: absolute;
                 left: 7px;
                 top: 7px;
@@ -169,12 +168,13 @@ $white: #FEFEFE;
             position: relative;
             &_icon{
                 position: absolute;
-                top: 7px;
+                top: 9px;
                 left: 10px;
                 color: $green;
             }
             &_input{
                 background-color: #f0f0f0a9;
+                border: 2px $green solid;
                 border-radius: 20px;
                 height: 30px;
                 width: 200px;

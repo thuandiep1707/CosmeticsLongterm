@@ -9,7 +9,11 @@ $white: #FEFEFE;
     width: 270px;
     height: 400px;
     margin: 10px;
-    padding: 15px;
+    padding: 15px 12.5px;
+    border: {
+        left: 2.5px $green solid;
+        right: 2.5px $green solid;
+    };
     &::before{
         content: "";
         display: block;
@@ -34,11 +38,6 @@ $white: #FEFEFE;
     }
     &:hover,
     &:active{
-        padding: 15px 12.5px;
-        border: {
-            left: 2.5px $green solid;
-            right: 2.5px $green solid;
-        };
         &::before,
         &::after{
             width: 100%;
@@ -79,6 +78,7 @@ $white: #FEFEFE;
         &:active{
             background-color: $green;
             color: $gray;
+            cursor: pointer;
         }
     }
 }

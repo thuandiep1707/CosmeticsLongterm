@@ -23,9 +23,11 @@ $white: #FEFEFE;
     }
     .portfolio{
         width: 100%;
-        background-color: $browse;
+        background-color: $green;
         padding-top: 10px;
         &_title{
+            display: block;
+            margin: 0.7rem auto;
             text-align: center;
             // line-height: 50px;
             font-size: 2.5rem;
