@@ -8,6 +8,9 @@ import "./homepage.scss"
 
 const Homepage = () => {
     const {slideShow,bestSales,portfolio} =useContext(GlobalContext)
+
+    window.scroll(0,0)
+
     return(
         <div className="homepage">
             <Slides slideShow={slideShow} />

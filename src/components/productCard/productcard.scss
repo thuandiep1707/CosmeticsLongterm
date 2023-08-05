@@ -3,49 +3,17 @@ $green: #113E21;
 $gray: #F0F0F0;
 $white: #FEFEFE;
 .product_card{
-    display: inline-block;
+    display: flex;
+     flex-direction: column;
     position: relative;
     background-color: $gray;
-    width: 270px;
-    height: 400px;
-    margin: 10px;
-    padding: 15px 12.5px;
-    border: {
-        left: 2.5px $green solid;
-        right: 2.5px $green solid;
-    };
-    &::before{
-        content: "";
-        display: block;
-        position: absolute;
-         top: 0;
-         left: 0;
-        background-color: $green;
-        height: 2.5px;
-        width: 0;
-        transition: all 0.3s linear;
-    }
-    &::after{
-        content: "";
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background-color: $green;
-        height: 2.5px;
-        width: 0;
-        transition: all 0.3s linear;
-    }
-    &:hover,
-    &:active{
-        &::before,
-        &::after{
-            width: 100%;
-        }
-    }
+    padding-bottom: 10px;
+    border: 2.5px $green solid;
+    border-radius: 5px;
     &_img{
-        width: 270px;
-        height: 270px;
+        aspect-ratio: 1/1;
+        width: 95%;
+        margin: 2.5%;
     }
     &_name,
     &_author,
@@ -56,6 +24,8 @@ $white: #FEFEFE;
         color: $green;
     }
     &_name{
+        display: block;
+        height: 54px;
         font-size: 1.5rem;
         font-weight: 700;
         letter-spacing: 2px;
@@ -70,6 +40,7 @@ $white: #FEFEFE;
         margin: 10px auto;
         padding: 5px 40px;
         border: 2px $green solid;
+        border-radius: 5px;
         color: $green;
         font-size: 0.9rem;
         letter-spacing: 2px;

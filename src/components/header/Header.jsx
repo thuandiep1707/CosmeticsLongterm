@@ -17,10 +17,10 @@ const Header = () => {
                 </Link>
                 <nav className="header_nav">
                     <div className="header_nav_shop">
-                        <Link to='/shop/general' className="link">SHOP</Link>
+                        <Link to='/shop/general' className="link">CỬA HÀNG</Link>
                         <ul className="header_nav_shop_select">
                             <li className="header_nav_shop_select_option">
-                                <Link to="shop/pefume" className="link">NƯỚC HOA</Link>
+                                <Link to="shop/perfume" className="link">NƯỚC HOA</Link>
                             </li>
                             <li className="header_nav_shop_select_option">
                                 <Link to="/shop/serum" className="link">SERUM</Link>

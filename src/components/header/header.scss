@@ -44,21 +44,10 @@ $white: #FEFEFE;
         // border: 1px $green solid;
         &_square{
             display: block;
-            background-color: $green;
-            height: 50px;
-            width: 50px;
-            border-radius: 10px;
-            &::before{
-                content: "";
-                display: block;
-                height: 36px;
-                width: 36px;
-                background-color: $gray;
-                position: absolute;
-                left: 7px;
-                top: 7px;
-                border-radius: 5px; 
-            }
+            width: 35px;
+            aspect-ratio: 1;
+            border: 7px $green solid;
+            border-radius: 20%;
         }
         &_brand{
             letter-spacing: 1px;

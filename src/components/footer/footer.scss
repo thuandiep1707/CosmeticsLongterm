@@ -1,12 +1,16 @@
+$browse: #B38B59;
+$green: #113E21;
+$gray: #F0F0F0;
+$white: #FEFEFE;
 .customer_footer{
     display: flex;
     justify-content: flex-start;
     position: relative;
     z-index: 1;
-    background-color: rgb(9,9,9);
+    background-color: $green;
     padding: 10px 40px 0;
     height: 310px;
-    color: white;
+    color: $white;
     // width: 100%;
     &_imgs{
         // display: inline-block;
@@ -72,7 +76,7 @@
             margin-right: 10px;
             &:hover{
                 cursor: pointer;
-                color: rgb(49, 137, 219);
+                color: rgb(3, 133, 255);
             }
         }
     }

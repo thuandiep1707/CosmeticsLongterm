@@ -7,9 +7,12 @@ import footerData from './assets/footerData.js'
 const GlobalContext = createContext()
 
 const GlobalProvider = ({children}) => {
+
+    // hàm tìm kiếm sản phẩm
     const search = (product_name) => {
         console.log(product_name)
     }
+
     const value = {
         productsData,
         slideShow,
@@ -18,6 +21,7 @@ const GlobalProvider = ({children}) => {
         footerData,
         search
     }
+
     return (
         <GlobalContext.Provider value={value}>
             {children}

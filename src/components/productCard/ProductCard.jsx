@@ -9,7 +9,7 @@ const ProductCard = ({productData}) => {
     }
     return(
         <div className="product_card">
-            <img src={productData.img[0]} alt="product best sale" className="product_card_img" />
+            <img src={productData.img[0]} alt={productData.name} className="product_card_img" />
             <h3 className="product_card_name">{productData.name}</h3>
             <h4 className="product_card_author">EAU DE PARFUM</h4>
             <h5 className="product_card_price">{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'VND' }).format(productData.price)}</h5>
