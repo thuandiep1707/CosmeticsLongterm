@@ -52,6 +52,7 @@ const bestSales = [
     {
         "id"          :"01",
         "name"        :"COME OUT",
+        "author"      :"EAU DE PARFUM",
         "price"       :5300000,
         "img"         :["http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq"],
         "categoryName"  : "perfume"
@@ -59,6 +60,7 @@ const bestSales = [
     {
         "id"          :"02",
         "name"        :"CREATION 8",
+        "author"      :"EAU DE PARFUM",
         "price"       :2500000,
         "img"         :["http://drive.google.com/uc?export=view&id=13rwrd15e76AYtelBowQLZOKofKtNmbeP"],
         "categoryName"  : "perfume"
@@ -66,6 +68,7 @@ const bestSales = [
     {
         "id"          :"03",
         "name"        :"BELOVED J",
+        "author"      :"EAU DE PARFUM",
         "price"       :2500000,
         "img"         :["http://drive.google.com/uc?export=view&id=13_ke5kUcnSSAO0wN4kPOZC29QvvNAVtO"],
         "categoryName"  : "perfume"
@@ -73,6 +76,7 @@ const bestSales = [
     {
         "id"          :"04",
         "name"        :"EDELWEISS",
+        "author"      :"EAU DE PARFUM",
         "price"       :2250000,
         "img"         :["http://drive.google.com/uc?export=view&id=1JD4GWTGhH2vsYhREuyl07QQQ3Tc4-39Y"],
         "categoryName"  : "perfume"
@@ -80,6 +84,7 @@ const bestSales = [
     {
         "id"          :"05",
         "name"        :"I'M YOURS",
+        "author"      :"EAU DE PARFUM",
         "price"       :1200000,
         "img"         :["http://drive.google.com/uc?export=view&id=13BuNyOSckZ4QTnCEWJSwFD28ePsQSZop"],
         "categoryName"  : "perfume"

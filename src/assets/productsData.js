@@ -54,9 +54,10 @@ const productsData = [
     {
         "id"          :"01",
         "name"        :"COME OUT",
+        "author"      :"EAU DE PARFUM",
         "price"       :5300000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
+            "http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
             "http://drive.google.com/uc?export=view&id=",
             "http://drive.google.com/uc?export=view&id="
         ],
@@ -70,6 +71,7 @@ const productsData = [
     {
         "id"          :"02",
         "name"        :"CREATION 8",
+        "author"      :"EAU DE PARFUM",
         "price"       :2500000,
         "img"         :[
         "http://drive.google.com/uc?export=view&id=",
@@ -86,6 +88,7 @@ const productsData = [
     {
         "id"          :"03",
         "name"        :"BELOVED J",
+        "author"      :"EAU DE PARFUM",
         "price"       :2500000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -102,6 +105,7 @@ const productsData = [
     {
         "id"          :"04",
         "name"        :"EDELWEISS",
+        "author"      :"EAU DE PARFUM",
         "price"       :2250000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -118,6 +122,7 @@ const productsData = [
     {
         "id"          :"05",
         "name"        :"I'M YOURS",
+        "author"      :"EAU DE PARFUM",
         "price"       :1200000,
         "img"       :[
             "http://drive.google.com/uc?export=view&id=",
@@ -134,6 +139,7 @@ const productsData = [
     {
         "id"          :"06",
         "name"        :"BEWITCHING KISS",
+        "author"      :"EAU DE PARFUM",
         "price"       :2000000,
         "img"       :[
             "http://drive.google.com/uc?export=view&id=",
@@ -150,6 +156,7 @@ const productsData = [
     {
         "id"          :"07",
         "name"        :"DARK FICTION",
+        "author"      :"EAU DE PARFUM",
         "price"       :2200000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -166,6 +173,7 @@ const productsData = [
     {
         "id"          :"08",
         "name"        :"DROP OF LOVE",
+        "author"      :"EAU DE PARFUM",
         "price"       :1800000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -182,6 +190,7 @@ const productsData = [
     {
         "id"          :"09",
         "name"        :"LOVE HANGOVER",
+        "author"      :"EAU DE PARFUM",
         "price"       :2300000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -198,6 +207,7 @@ const productsData = [
     {
         "id"          :"10",
         "name"        :"I'M NOT A BAD MAN",
+        "author"      :"EAU DE PARFUM",
         "price"       :1800000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -214,6 +224,7 @@ const productsData = [
     {
         "id"          :"11",
         "name"        :"THE ART OF SEDUCTION",
+        "author"      :"EAU DE PARFUM",
         "price"       :2000000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -230,6 +241,7 @@ const productsData = [
     {
         "id"          :"12",
         "name"        :"BLOOMING GARDEN",
+        "author"      :"EAU DE PARFUM",
         "price"       :1600000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -246,6 +258,7 @@ const productsData = [
     {
         "id"          :"13",
         "name"        :"PASSION IN LOVE",
+        "author"      :"EAU DE PARFUM",
         "price"       :960000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -262,6 +275,7 @@ const productsData = [
     {
         "id"          :"14",
         "name"        :"HONEY AND BEE",
+        "author"      :"EAU DE PARFUM",
         "price"       :1440000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -278,6 +292,7 @@ const productsData = [
     {
         "id"          :"15",
         "name"        :"HOTTING UP SWEETLY",
+        "author"      :"EAU DE PARFUM",
         "price"       :1440000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",
@@ -294,6 +309,7 @@ const productsData = [
     {
         "id"          :"16",
         "name"        :"JUST A DESIRE",
+        "author"      :"EAU DE PARFUM",
         "price"       :1600000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=",

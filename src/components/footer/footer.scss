@@ -10,8 +10,8 @@ $white: #FEFEFE;
     background-color: $green;
     padding: 10px 40px 0;
     height: 310px;
+    border-top: 1px $white solid;
     color: $white;
-    // width: 100%;
     &_imgs{
         // display: inline-block;
         width: 100px;

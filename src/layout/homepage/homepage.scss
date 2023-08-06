@@ -23,9 +23,11 @@ $white: #FEFEFE;
         margin: 20px auto;
     }
     .portfolio{
-        width: 100%;
+        width: 99.5%;
+        margin: 0.25%;
         background-color: $green;
-        padding-top: 10px;
+        padding: 10px 0.1% 0;
+        border-radius: 5px;
         &_title{
             display: block;
             margin: 0.7rem auto;
@@ -44,6 +46,7 @@ $white: #FEFEFE;
             &_img{
                 height: 100%;
                 width: 100%;
+                border-radius: 5px;
             }
             &_description{
                 display: flex;
@@ -58,6 +61,7 @@ $white: #FEFEFE;
                 width: 96%;
                 background-color: #9c805dc2;
                 border: 2% #f0f0f000 solid;
+                border-radius: 5px;
                 overflow: hidden;
                 transition: all 0.3s linear;
                 &_title, &_content{
