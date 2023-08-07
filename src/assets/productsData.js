@@ -58,8 +58,8 @@ const productsData = [
         "price"       :5300000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
+            "http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq"
         ],
         "propoties"   :{
             "type"        :"Product",

@@ -2,7 +2,7 @@
     position: relative;
     aspect-ratio : 2.5;
     width: 100%;
-    // height: 700px;
+
     &_img{
         width: 100%;
         height: 100%;
@@ -17,13 +17,12 @@
         position: absolute;
          top: 0;
          left: 0;
-        //  padding-top: 50px;
         background-color: #00000046;
-        height: 100%;
+        height: calc(100% - 4px);
         width: 100%;
         color: #ffffff;
         &_title{
-            margin-top: -160px;
+            margin-top: -180px;
             font-size: 3em;
             opacity: 0;
             animation: start_content 0.5s forwards;
@@ -32,11 +31,11 @@
             font-size: 1.5em;
             width: 40%;
             text-align: center;
-            margin-top: -30px;
+            margin-top: 10px;
         }
     }
     &_control{
-        height: 100%;
+        height: calc(100% - 4px);
         width: 100%;
         position: absolute;
         top:0;
@@ -46,7 +45,7 @@
             display: flex;
              justify-content: center;
              align-items: center;
-            height: 100%;
+            height: 99.5%;
             width: 150px;
             position: absolute;
              top:0;
@@ -91,7 +90,7 @@
 @keyframes start_content {
     to{
         // height: 100%;
-        margin-top: -120px;
+        margin-top: -150px;
         padding-top: unset;
         opacity: 1;
     }
