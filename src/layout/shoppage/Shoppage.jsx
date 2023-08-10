@@ -10,14 +10,15 @@ const Shoppage = () => {
     const {productstyle} = useParams()
     const {productsData} = useContext(GlobalContext)
     const [list, setList] = useState(productsData)
+    const [number, setNumber] = useState(0)
     
     window.scroll(0,0)
 
     //ở bước này, chúng ta sẽ kiểm tra giữa productstyle lấy từ param và categoryName từ data để đưa ra danh sách tương thích
     const productDataFilter = () => {
-        setList(
-            productsData.filter((product)=> {return product.categoryName === productstyle})
-        )
+        let list = productsData.filter((product)=> {return product.categoryName === productstyle})
+        setList(list)
+        setNumber(list.length)
     }
     useEffect(()=>{
         if (productstyle === "general") {setList(productsData)}
@@ -36,7 +37,7 @@ const Shoppage = () => {
                     <div className="shoppage_container_nav_link">
                         <Link to='/shop/general' className="link">CỬA HÀNG</Link> / <Link to={`/shop/${productstyle}`} className="link">{productstyle === "general" ? "tất cả sản phẩm" : productstyle}</Link>
                     </div>
-                    <div className="shoppage_container_nav_quantity">Số lượng: {productsData.length}</div>
+                    <div className="shoppage_container_nav_quantity">Số lượng: {number}</div>
                 </div>
                 <div className="filter"></div>
                 <div className="shoppage_container_productlist">

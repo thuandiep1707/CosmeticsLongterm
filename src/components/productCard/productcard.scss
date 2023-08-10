@@ -5,6 +5,8 @@ $white: #FEFEFE;
 .product_card{
     display: flex;
      flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
     position: relative;
     background-color: $gray;
     padding-bottom: 10px;
@@ -24,10 +26,11 @@ $white: #FEFEFE;
         display: block;
         text-align: center;
         color: $green;
+        width: 90%;
     }
     &_name{
         display: block;
-        height: 54px;
+        min-height: 54px;
         font-size: 1.5rem;
         font-weight: 700;
         letter-spacing: 2px;

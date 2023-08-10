@@ -1,55 +1,3 @@
-//Hình ảnh của nước hoa
-// import ComeOut1 from "./img/perfume/ComeOut1.jpg"
-// import ComeOut2 from "./img/perfume/ComeOut2.jpg"
-// import ComeOut3 from "./img/perfume/ComeOut3.jpg"
-// import Creation81 from "./img/perfume/Creation81.jpg"
-// import Creation82 from "./img/perfume/Creation82.jpg"
-// import Creation83 from "./img/perfume/Creation83.jpg"
-// import BelovedJ1 from "./img/perfume/BelovedJ1.jpg"
-// import BelovedJ2 from "./img/perfume/BelovedJ2.jpg"
-// import BelovedJ3 from "./img/perfume/BelovedJ3.jpg"
-// import Edelweiss1 from "./img/perfume/Edelweiss1.jpg"
-// import Edelweiss2 from "./img/perfume/Edelweiss2.jpg"
-// import Edelweiss3 from "./img/perfume/Edelweiss3.jpg"
-// import ImYour1 from "./img/perfume/ImYour1.jpg"
-// import ImYour2 from "./img/perfume/ImYour2.jpg"
-// import ImYour3 from "./img/perfume/ImYour3.jpg"
-// import BelwitchingKiss1 from "./img/perfume/BelwitchingKiss1.jpg"
-// import BelwitchingKiss2 from "./img/perfume/BelwitchingKiss2.jpg"
-// import BelwitchingKiss3 from "./img/perfume/BelwitchingKiss3.jpg"
-// import DarkFiction1 from "./img/perfume/DarkFiction1.jpg"
-// import DarkFiction2 from "./img/perfume/DarkFiction2.jpg"
-// import DarkFiction3 from "./img/perfume/DarkFiction3.jpg"
-// import DropOfLove1 from "./img/perfume/DropOfLove1.jpg"
-// import DropOfLove2 from "./img/perfume/DropOfLove2.jpg"
-// import DropOfLove3 from "./img/perfume/DropOfLove3.jpg"
-// import LoveHangover1 from "./img/perfume/LoveHangover1.jpg"
-// import LoveHangover2 from "./img/perfume/LoveHangover2.jpg"
-// import LoveHangover3 from "./img/perfume/LoveHangover3.jpg"
-// import ImNotABadMan1 from "./img/perfume/ImNotABadMan1.jpg"
-// import ImNotABadMan2 from "./img/perfume/ImNotABadMan2.jpg"
-// import ImNotABadMan3 from "./img/perfume/ImNotABadMan3.jpg"
-// import TheArtOfSeduction1 from "./img/perfume/TheArtOfSeduction1.jpg"
-// import TheArtOfSeduction2 from "./img/perfume/TheArtOfSeduction2.jpg"
-// import TheArtOfSeduction3 from "./img/perfume/TheArtOfSeduction3.jpg"
-// import BloomingGarden1 from "./img/perfume/BloomingGarden1.jpg"
-// import BloomingGarden2 from "./img/perfume/BloomingGarden2.jpg"
-// import BloomingGarden3 from "./img/perfume/BloomingGarden3.jpg"
-// import PassionInLove1 from "./img/perfume/PassionInLove1.jpg"
-// import PassionInLove2 from "./img/perfume/PassionInLove2.jpg"
-// import PassionInLove3 from "./img/perfume/PassionInLove3.jpg"
-// import HoneyAndBee1 from "./img/perfume/HoneyAndBee1.jpg"
-// import HoneyAndBee2 from "./img/perfume/HoneyAndBee2.jpg"
-// import HoneyAndBee3 from "./img/perfume/HoneyAndBee3.jpg"
-// import HotingUpSweetly1 from "./img/perfume/HotingUpSweetly1.jpg"
-// import HotingUpSweetly2 from "./img/perfume/HotingUpSweetly2.jpg"
-// import HotingUpSweetly3 from "./img/perfume/HotingUpSweetly3.jpg"
-// import JustADesire1 from "./img/perfume/JustADesire1.jpg"
-// import JustADesire2 from "./img/perfume/JustADesire2.jpg"
-// import JustADesire3 from "./img/perfume/JustADesire3.jpg"
-
-//Hình ảnh của son môi
-
 const productsData = [
     {
         "id"          :"01",
@@ -58,13 +6,13 @@ const productsData = [
         "price"       :5300000,
         "img"         :[
             "http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
-            "http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
-            "http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq"
+            "http://drive.google.com/uc?export=view&id=1TXAeYrsBcbEaw4klVZXRhxWcduem_rZk",
+            "http://drive.google.com/uc?export=view&id=15Qao_vB6r_GlQ_PKW7Yu9SfwxsadTqz2"
         ],
         "propoties"   :{
             "type"        :"Product",
             "collection"  :"Mùa Xuân",
-            "description" :"Whoever You Are, Whoever I Am? Bạn và tôi, ta đã từng là ai? Và sẽ là ai ?Come out mở đầu với cam Neroli bung toả đầy mạnh mẽ khắp không gian, điểm nhẹ sự khắc khoải từ thảo mộc, như vài nét chấm phá cuộc sống đầy màu sắc. Mùi hương cháy phừng phực mà vẫn mát xanh như tuổi trẻ, ngây ngô trong trẻo nhưng cũng đầy ắp niềm kiêu hãnh nhiệt thành. Kết nối bằng một chút chua nhẹ của trái cây nhiệt đới, Come out bỗng nhiên trầm mặc giữa vườn hoa tĩnh lặng với nhài, mẫu đơn và hoa hồng phảng phất. Khép lại bằng hỗn hợp xạ hương và rêu, gỗ, mùi hương đưa tâm trí ta trở về với thiên nhiên thuần khiết, với nơi chốn bình yên mà nhìn rõ mình từ trong sâu thẳm.Come out và Lê Kinh Tài có nhiều nét tương đồng. Dù là tranh, hay mùi hương, trái ngược với những gì phóng khoáng và cuồng nhiệt như ấn tượng ban đầu, sự hiện thân của một tâm hồn trưởng thành với nhiều vết xước và những câu chuyện còn bỏ ngỏ sẽ là điều thôi thúc bạn khám phá.Phong cách: Kiêu hãnh, sâu sắc, cá tính"
+            "description" :"Whoever You Are, Whoever I Am? Bạn và tôi, ta đã từng là ai? Và sẽ là ai ? Come out mở đầu với cam Neroli bung toả đầy mạnh mẽ khắp không gian, điểm nhẹ sự khắc khoải từ thảo mộc, như vài nét chấm phá cuộc sống đầy màu sắc. Mùi hương cháy phừng phực mà vẫn mát xanh như tuổi trẻ, ngây ngô trong trẻo nhưng cũng đầy ắp niềm kiêu hãnh nhiệt thành. Kết nối bằng một chút chua nhẹ của trái cây nhiệt đới, Come out bỗng nhiên trầm mặc giữa vườn hoa tĩnh lặng với nhài, mẫu đơn và hoa hồng phảng phất. Khép lại bằng hỗn hợp xạ hương và rêu, gỗ, mùi hương đưa tâm trí ta trở về với thiên nhiên thuần khiết, với nơi chốn bình yên mà nhìn rõ mình từ trong sâu thẳm.Come out và Lê Kinh Tài có nhiều nét tương đồng. Dù là tranh, hay mùi hương, trái ngược với những gì phóng khoáng và cuồng nhiệt như ấn tượng ban đầu, sự hiện thân của một tâm hồn trưởng thành với nhiều vết xước và những câu chuyện còn bỏ ngỏ sẽ là điều thôi thúc bạn khám phá.Phong cách: Kiêu hãnh, sâu sắc, cá tính"
                     },
         "categoryName"  : "perfume"
     },
@@ -74,9 +22,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :2500000,
         "img"         :[
-        "http://drive.google.com/uc?export=view&id=",
-        "http://drive.google.com/uc?export=view&id=",
-        "http://drive.google.com/uc?export=view&id="
+        "http://drive.google.com/uc?export=view&id=13rwrd15e76AYtelBowQLZOKofKtNmbeP",
+        "http://drive.google.com/uc?export=view&id=1aigPJuVSCdLCzZ4rHJ91lyKUdV4fFaPE",
+        "http://drive.google.com/uc?export=view&id=17Uf5kGFEzCsrH3M96mpPDklPUIHQ4t9k"
     ],
         "propoties"   :{
             "type"        :"Product",
@@ -91,9 +39,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :2500000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=13_ke5kUcnSSAO0wN4kPOZC29QvvNAVtO",
+            "http://drive.google.com/uc?export=view&id=12b8wSqh1D4pwhI77B9PgIAJoKmu_fwk9",
+            "http://drive.google.com/uc?export=view&id=1XnE3Kp7PnSb4pqeBz9FYHMil3TDh3Qr-"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -108,9 +56,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :2250000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1JD4GWTGhH2vsYhREuyl07QQQ3Tc4-39Y",
+            "http://drive.google.com/uc?export=view&id=1HkUMGp_XIKgMzF65InltM5GzKlcPLh2G",
+            "http://drive.google.com/uc?export=view&id=1EIz5z0ZlH_S3hjlim6DNduvo-rKhyBr3"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -125,9 +73,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :1200000,
         "img"       :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=13BuNyOSckZ4QTnCEWJSwFD28ePsQSZop",
+            "http://drive.google.com/uc?export=view&id=1fWRuLRS7KBIoFj07sNATt7rgK3LwuM6p",
+            "http://drive.google.com/uc?export=view&id=1UU1AvJKsjTiwhz5ltVQB-poO0sOCpT-e"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -142,9 +90,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :2000000,
         "img"       :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1ZaiIuGxfqF5avmSalLW6qs3IRWDf_P7b",
+            "http://drive.google.com/uc?export=view&id=1Uf1djQEVoBG2NmTS1QBkExo-5mBNZhHd",
+            "http://drive.google.com/uc?export=view&id=1viwdHZHHq6nDdrhi4CqhKVZRfToRi5za"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -159,9 +107,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :2200000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1xKiQOCrY7187Zf5V4DjMv-ojkTg-qAHW",
+            "http://drive.google.com/uc?export=view&id=12fk-tqYsJYsMVRU7pLLFqEWCGw4ZLvBS",
+            "http://drive.google.com/uc?export=view&id=1iRfnOBQj2uBNTDaQa8IJwrnaXY1bzVED"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -176,9 +124,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :1800000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1gQ8aAoyoBe3fV0W7ZxQCXZPjWXr_H31r",
+            "http://drive.google.com/uc?export=view&id=1TlmAW32y-6ojCSiCfpdkYz2gC9ebj5HA",
+            "http://drive.google.com/uc?export=view&id=1bvnWLcbFWxbxBX3Gl1vhxcECrIC2DgMG"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -193,9 +141,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :2300000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1lItAlOK2lRW1mG_SplT32FEBJDPR1N12",
+            "http://drive.google.com/uc?export=view&id=1DdrSXAr7ToxsmfGWnoPRMqw7lvEuR7zV",
+            "http://drive.google.com/uc?export=view&id=1aPL-ydaUWnjlWeLURVWjxrmXL9vIKJpx"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -210,9 +158,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :1800000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1JXUwyQIfRF6d8eNslVcCgjIyi2pAQoV3",
+            "http://drive.google.com/uc?export=view&id=14my6PWdpUM81Hv8v2n4Xp1iwAFuPti0s",
+            "http://drive.google.com/uc?export=view&id=1LluMHUq9gOAV_2vxfm0kUkkepHwhZhlJ"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -227,9 +175,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :2000000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1clRI_lWWML9hcZo6HvunVKHREEQO_LMH",
+            "http://drive.google.com/uc?export=view&id=10uqxDKztW_LelsvH_gJbYAaVymHRm7Zn",
+            "http://drive.google.com/uc?export=view&id=1lG4YTRG8G3oV7JrMTrFxsRkuCRzowMtd"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -244,9 +192,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :1600000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1VcdQB-3s32YvaLrK6EJXt_AevQoZ9C8g",
+            "http://drive.google.com/uc?export=view&id=1tcZD-bwWLL8UhSyzg-uu-bky1O3vhnQr",
+            "http://drive.google.com/uc?export=view&id=1aGoWnAg5lXPrrz08FIJXDtsJCoFOn5QC"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -261,9 +209,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :960000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1lItAlOK2lRW1mG_SplT32FEBJDPR1N12",
+            "http://drive.google.com/uc?export=view&id=1DdrSXAr7ToxsmfGWnoPRMqw7lvEuR7zV",
+            "http://drive.google.com/uc?export=view&id=1aPL-ydaUWnjlWeLURVWjxrmXL9vIKJpx"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -278,9 +226,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :1440000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=12US798cp9n_-wtYkCjcLH3mdesQfjW_-",
+            "http://drive.google.com/uc?export=view&id=1Z8jTfjCfCXFM011hMG_PXzW8P4s930qX",
+            "http://drive.google.com/uc?export=view&id=1iJ8MlvG59gRClOeF7qTv3HFDa00pJYwH"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -295,9 +243,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :1440000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1r6rQ8e-AdN7oHEDKAj7EOP9E6D8X1uDg",
+            "http://drive.google.com/uc?export=view&id=1Sbet6w2OzVnkEEB7265puMpHAHf0qr06",
+            "http://drive.google.com/uc?export=view&id=1R6EF4Bsue5V74sJhqS0lm0P4Txn3DIWk"
         ],
         "propoties"   :{
             "type"        :"Product",
@@ -312,9 +260,9 @@ const productsData = [
         "author"      :"EAU DE PARFUM",
         "price"       :1600000,
         "img"         :[
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id=",
-            "http://drive.google.com/uc?export=view&id="
+            "http://drive.google.com/uc?export=view&id=1r6rQ8e-AdN7oHEDKAj7EOP9E6D8X1uDg",
+            "http://drive.google.com/uc?export=view&id=1Sbet6w2OzVnkEEB7265puMpHAHf0qr06",
+            "http://drive.google.com/uc?export=view&id=1R6EF4Bsue5V74sJhqS0lm0P4Txn3DIWk"
         ],
         "propoties"   :{
             "type"        :"Product",

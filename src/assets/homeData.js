@@ -4,12 +4,6 @@ import lipstick from './img/home/lipstick.jpeg'
 import serum from './img/home/serum.jpeg'
 import toner from './img/home/toner.jpeg'
 import makeup from './img/home/makeup.jpeg'
-//bestsale
-// import ComeOut1 from "./img/home/ComeOut1.jpg"
-// import Creation81 from "./img/home/Creation81.jpg"
-// import BelovedJ1 from "./img/home/BelovedJ1.jpg"
-// import Edelweiss1 from "./img/home/Edelweiss1.jpg"
-// import ImYour1 from "./img/home/ImYour1.jpg"
 //portfolio
 import portfolio1 from './img/home/portfolio1.jpg'
 import portfolio2 from './img/home/portfolio2.jpg'
@@ -87,6 +81,14 @@ const bestSales = [
         "author"      :"EAU DE PARFUM",
         "price"       :1200000,
         "img"         :["http://drive.google.com/uc?export=view&id=13BuNyOSckZ4QTnCEWJSwFD28ePsQSZop"],
+        "categoryName"  : "perfume"
+    },
+    {
+        "id"          :"05",
+        "name"        :"BEWITCHING KISS",
+        "author"      :"EAU DE PARFUM",
+        "price"       :2000000,
+        "img"         :["http://drive.google.com/uc?export=view&id=1ZaiIuGxfqF5avmSalLW6qs3IRWDf_P7b"],
         "categoryName"  : "perfume"
     }
 ]

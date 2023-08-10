@@ -32,19 +32,21 @@ $white: #FEFEFE;
         // border: 1px solid white;
         &_p1{
             font-size: 20px;
-            padding-left: 5px;
         }
         &_p2{
             font-size: 13px;
             font-weight: 700;
             margin-top: 10px;
+            padding-left: 5px;
         }
         &_p3{
             font-size: 13px;
             margin-bottom: 10px;
+            padding-left: 5px;
         }
         &_p3s{
             font-size: 13px;
+            padding-left: 5px;
         }
     }
     &_infor{
@@ -56,15 +58,14 @@ $white: #FEFEFE;
         height: 170px;
         &_p1{
             font-size: 20px;
-            padding-left: 5px;
             padding-bottom: 10px;
         }
         &_p2{
             display: block;
             font-size: 13px;
             margin-bottom: 5px;
+            padding-left: 5px;
         }
-        
     }
     &_contact_icon{
         position: absolute;

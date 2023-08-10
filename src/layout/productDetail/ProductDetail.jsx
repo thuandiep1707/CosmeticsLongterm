@@ -1,6 +1,7 @@
 import {useState, useEffect, useContext} from 'react'
 import {Link, useParams} from 'react-router-dom'
 
+import ProductCard from '../../components/productCard/ProductCard'
 import { GlobalContext } from '../../GlobalContext'
 
 import './productdetail.scss'
@@ -9,12 +10,10 @@ import './productdetail.scss'
 const ProductDetail = () => {
     const {productstyle, id} = useParams()
     const {productsData} = useContext(GlobalContext)
-    
-    const [productList, setProductList ] = useState(productsData) //danh sách sản phẩm ở phần recommend
+    const [likeStyleList, setLikeStyleList] = useState(productsData)
+    const [recommendList, setRecommendList ] = useState(productsData) //danh sách sản phẩm ở phần recommend
     const [product, setProduct] = useState(productsData[Number(id)-1]) //thông tin sản phẩm sẽ hiển thị
-    const [quantity, setQuantity] = useState(0) // số lượng sản phẩm sẽ mua
-
-    
+    const [quantity, setQuantity] = useState(1) // số lượng sản phẩm sẽ mua
 
     const handleProductListFilter = () => {
         let list4Products = new Array(4)
@@ -27,18 +26,18 @@ const ProductDetail = () => {
         //bắt đàu vòng lặp,gán giá trị sản phẩm tìm được từ listOfStyle ở vị trị position vào trong list4Products. Do id trong data đi từ 1 nên khi gán position = id thì mặc định sẽ lấy phần tử tiếp theo.
         //tăng position lên 1 rồi kiểm tra, nếu posion = độ dài danh sách cùng loại ban đầu thì gán giá trị 0 cho posion và tiep tục vòng lặp
         for (let i = 0; i<4; i++){
-            list4Products[i] = listOfStyle[position] //0
-            position+=1
-            if (position == listOfStyle.length){ //16 === 16
+            if (position == listOfStyle.length){
                 position=0
             }
+            list4Products[i] = listOfStyle[position]
+            position+=1
         }
-        setProductList(list4Products)
+        setLikeStyleList(list4Products)
     }
 
     useEffect(()=>{
         handleProductListFilter()
-        window.scroll(0,0)
+        window.scrollTo({top:0,left:0,behavior:"smooth"})
     },[id])
 
     const handleChangeQuantity = (value)=>{
@@ -71,6 +70,7 @@ const ProductDetail = () => {
                 <div className="product_detail_container_content">
                     <h2 className="product_detail_container_content_name">{product.name}</h2>
                     <h4 className="product_detail_container_content_author">{product.author}</h4>
+                    <p className="product_detail_container_content_price">{new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'VND' }).format(product.price)}</p>
                     <p className="product_detail_container_content_description">{product.propoties.description}</p>
                     <div className="product_detail_container_content_quantity">
                         <label htmlFor="quantity">Số lượng: </label>
@@ -87,7 +87,26 @@ const ProductDetail = () => {
                     <p className="product_detail_container_content_try">Quý khác có thể trải nghiệm trực tiếp sản phẩm tại cửa hàng trước khi quyết định</p>
                 </div>
             </div>
-            <div className="product_detail_recommend"></div>
+            <div className="product_detail_like_style">
+                <p className="product_detail_like_style_title">CÁC SẢN PHẦM CÙNG LOẠI</p>
+                <div className="product_detail_like_style_list">
+                    {
+                        likeStyleList.map((value, index)=>{
+                            return <ProductCard productData={value} key={index} />
+                        })
+                    }
+                </div>
+            </div>
+            <div className="product_detail_recommend">
+                <p className="product_detail_recommend_title">CÓ THỂ BẠN CŨNG THÍCH</p>
+                <div className="product_detail_recommend_list">
+                    {
+                        recommendList.map((value, index)=>{
+                            return <ProductCard productData={value} key={index} />
+                        })
+                    }
+                </div>
+            </div>
         </div>
         )
 }

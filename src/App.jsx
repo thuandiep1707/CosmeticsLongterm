@@ -5,7 +5,7 @@ import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Homepage from './layout/homepage/Homepage'
 import Shoppage from './layout/shoppage/Shoppage'
-import ProductDetail from './layout/product-detail/ProductDetail'
+import ProductDetail from './layout/productDetail/ProductDetail'
 
 import './App.scss'
 

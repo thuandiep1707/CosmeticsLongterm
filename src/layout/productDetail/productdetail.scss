@@ -7,18 +7,18 @@ $white: #FEFEFE;
     background-color: #00000049;
     width: 100%;
     padding: 15px 20px;
+    opacity: 0;
+    animation: start_product_detail 1s forwards;
     &_nav,
     &_container{
-        position: relative;
-        top: 200px;
         background-color: $gray;
         width: 1300px;
-        margin: 0 auto 5px;
+        margin: 0 auto;
         border-radius: 5px;
-        animation: start_product_detail 0.5s forwards;
     }
     &_nav{
         padding: 10px 20px;
+        margin-bottom: 5px;
         color: $green;
         text-transform: uppercase;
     }
@@ -64,17 +64,17 @@ $white: #FEFEFE;
             }
             &_author{
                 opacity: 0.7;
-                margin: 5px 0 0;
+                margin: 5px 0 0 5px;
                 letter-spacing: 1px;
             }
             &_price{
                 font-size: 1.5em;
-                margin: 10px 0;
+                margin: 10px 0 10px 5px;
             }
             &_description{
                 text-align: justify;
                 letter-spacing: 0.5px;
-                padding: 0 3px 10px;
+                padding: 0 5px 10px 5px;
                 border-bottom: 1px $green solid;
             }
             &_quantity{
@@ -125,11 +125,33 @@ $white: #FEFEFE;
             }
         }
     }
+    &_like_style,
+    &_recommend{
+        background-color: $gray;
+        width: 1300px;
+        margin: 5px auto 0;
+        padding: 20px 20px 40px;
+        border-radius: 5px;
+        &_title{
+            display: block;
+            width: 100%;
+            margin: 0 0 20px;
+            padding: 5px;
+            border-bottom: 2px $green solid;
+            color: $green;
+        }
+        &_list{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+            padding: 0 10px;
+        }
+    }
 }
 
 
 @keyframes start_product_detail {
     to{
-        top: 0;
+        opacity: 1;
     }
 }

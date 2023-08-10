@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import {Slide1,Slide2} from './SlideChild'
-import './slides.scss'
+import '../style/slides.scss'
 
 const Slides = ({slideShow})=>{
     const [numSlide, setNumSlide] = useState(3)

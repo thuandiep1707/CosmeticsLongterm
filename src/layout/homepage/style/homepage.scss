@@ -1,0 +1,84 @@
+$browse: #B38B59;
+$green: #113E21;
+$gray: #F0F0F0;
+$white: #FEFEFE;
+.homepage{
+    min-width: 1630px;
+    &_bestsales{
+        background-color:  $gray;
+        width: 99%;
+        margin: 5px 0.5%;
+        padding: 15px 15px 30px;
+        border-radius: 5px;
+        &_title{
+            display: block;
+            background-color: $green;
+            width: 100%;
+            margin: 0 0 10px;
+            padding: 10px;
+            color: $gray;
+            align-items: center;
+            text-align: center;
+            border-radius: 5px;
+
+        }
+        &_items{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 10px;
+            width: 100%;
+            // margin: 20px auto;
+            padding: 20px auto;
+        }
+    }
+    &_portfolio{
+        width: 99%;
+        background-color: $green;
+        margin: 0.5%;
+        padding: 10px;
+        border-radius: 5px;
+        &_title{
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            align-items: center;
+            text-align: center;
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            color: $gray;
+        }
+        &_items{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+            &_item{
+                position: relative;
+                &_img{
+                    width: 100%;
+                    aspect-ratio: 1;
+                    border-radius: 5px;
+                }
+                &_description{
+                    display: flex;
+                     flex-direction: column;
+                     justify-content: center;
+                     align-items: center;
+                    position: absolute;
+                     left: 2%;
+                     bottom: calc(2.5%);
+                    background-color: #113e218c;
+                    height: 0;
+                    width: 96%;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    color: $gray;
+                    transition: 0.25s linear;
+                }
+                &:hover &_description,
+                &:active &_description{
+                        height: 96%;
+                }
+            }
+        }
+    }
+}
