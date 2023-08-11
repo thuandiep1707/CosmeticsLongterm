@@ -2,6 +2,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import { useContext } from 'react'
 
 import {GlobalContext} from "../../GlobalContext";
+import Cart from "../cart/Cart";
 import './header.scss'
 
 const Header = () => {
@@ -54,6 +55,7 @@ const Header = () => {
                     <i className="fa-solid fa-user header_tool_profile header_tool_element"></i>
                 </div>
             </header>
+            <Cart/>
         </>
     )
 }

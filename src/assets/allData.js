@@ -13,6 +13,12 @@ import portfolio5 from './img/home/portfolio5.jpg'
 import portfolio6 from './img/home/portfolio6.jpg'
 import portfolio7 from './img/home/portfolio7.jpg'
 import portfolio8 from './img/home/portfolio8.jpg'
+//footer
+import logo3ce from "./img/footer/3ce.jpg"
+import logoDior from "./img/footer/Dior.jpg"
+import logojillian from "./img/footer/jillian.jpg"
+import logohasaki from "./img/footer/hasaki.jpg"
+
 
 const slideShow = [
     {
@@ -135,5 +141,5 @@ const portfolio = [
         "img": portfolio8
     },
 ]
-
-export {slideShow, bestSales, portfolio}
+const footerData = [logo3ce,logoDior,logojillian,logohasaki]
+export {slideShow, bestSales, portfolio, footerData}

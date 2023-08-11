@@ -1,8 +1,7 @@
 import { createContext, useState } from 'react'
 
 import productsData from './assets/productsData.js'
-import {slideShow,bestSales,portfolio} from './assets/homeData.js'
-import footerData from './assets/footerData.js'
+import {slideShow,bestSales,portfolio, footerData} from './assets/allData.js'
 
 const GlobalContext = createContext()
 
@@ -14,7 +13,16 @@ const GlobalProvider = ({children}) => {
     }
 
     // chức năng thêm sản phẩm vào giỏ hàng
-    const [cart, setCart] = useState() 
+    const [cart, setCart] = useState([
+        {
+            "id":"01",
+            "name":"COME OUT",
+            "author":"EAU DE PARFUM",
+            "price":5300000,
+            "img":"http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
+            "quantity":5
+        }
+    ]) 
     const addProdToCart = (product) => {
         if (cart) {
             let cartCopy = cart

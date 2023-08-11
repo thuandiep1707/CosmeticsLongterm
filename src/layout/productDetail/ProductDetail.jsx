@@ -84,7 +84,7 @@ const ProductDetail = () => {
                         <button className="product_detail_container_content_btn_buy" onClick={()=>handleCLickBuy()}>MUA NGAY</button>
                     </div>
                     <p className="product_detail_container_content_discovery">Discovery Set</p>
-                    <p className="product_detail_container_content_try">Quý khác có thể trải nghiệm trực tiếp sản phẩm tại cửa hàng trước khi quyết định</p>
+                    <p className="product_detail_container_content_try">Quý khách có thể trải nghiệm trực tiếp sản phẩm tại cửa hàng trước khi quyết định</p>
                 </div>
             </div>
             <div className="product_detail_like_style">

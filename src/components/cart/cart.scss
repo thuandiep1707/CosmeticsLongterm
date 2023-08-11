@@ -1,0 +1,12 @@
+$browse: #B38B59;
+$green: #113E21;
+$gray: #F0F0F0;
+$white: #FEFEFE;
+.cart{
+    position: absolute;
+    right: 0.5%;
+    top: 93px;
+    z-index: 10;
+    background-color: $gray;
+    border-radius: 5px;
+}
