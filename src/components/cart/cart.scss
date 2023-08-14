@@ -4,8 +4,6 @@ $gray: #F0F0F0;
 $white: #FEFEFE;
 .cart{
     position: fixed;
-     right: 0.5%;
-     top: 93px;
      z-index: 20;
     background-color: $white;
     width: 350px;
@@ -13,6 +11,21 @@ $white: #FEFEFE;
     padding: 8px;
     border-radius: 5px;
     box-shadow: 0 0 15px 1px gray;
+    opacity: 0;
+    animation: cart_start 0.5s forwards;
+        color: $green;
+    &_name{
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0 10px;
+        padding: 0 5px;
+        &_cart{
+            display: flex;
+            justify-content: space-between;
+            width: 27%;
+            align-items: center;
+        }
+    }
     .null{
         background-color: white;
         text-align: center;
@@ -92,5 +105,18 @@ $white: #FEFEFE;
                 color: $gray;
             }
         }
+    }
+}
+
+@keyframes cart_start {
+    from{
+        opacity: 0;
+        right: -350px;
+        top: 97px;
+    }
+    to{
+        right: 0.5%;
+        top: 97px;
+        opacity: 1;
     }
 }

@@ -75,6 +75,11 @@ $white: #FEFEFE;
                 font-size: 0.8em;
             }
         }
+        &_productnull{
+            padding-bottom: 20px;
+            text-align: center;
+            color: $green;
+        }
         &_productlist{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
