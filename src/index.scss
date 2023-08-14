@@ -31,4 +31,9 @@ li, input{
   color: unset;
   text-decoration: unset;
 }
+.pointer:hover,
+.pointer:active{
+  cursor: pointer;
+}
+
 

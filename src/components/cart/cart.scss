@@ -3,10 +3,94 @@ $green: #113E21;
 $gray: #F0F0F0;
 $white: #FEFEFE;
 .cart{
-    position: absolute;
-    right: 0.5%;
-    top: 93px;
-    z-index: 10;
-    background-color: $gray;
+    position: fixed;
+     right: 0.5%;
+     top: 93px;
+     z-index: 20;
+    background-color: $white;
+    width: 350px;
+    max-height: 500px;
+    padding: 8px;
     border-radius: 5px;
+    box-shadow: 0 0 15px 1px gray;
+    .null{
+        background-color: white;
+        text-align: center;
+    }
+    &_list{
+        background-color: $gray;
+        width: 100%;
+        max-height: 400px;
+        padding: 5px 5px 0;
+        border-radius: 5px;
+        overflow-x: scroll;
+        transition: 0.25s linear;
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+        &_item{
+            display: flex;
+             justify-content: flex-start;
+            position: relative;
+            background-color: $white;
+            height: 80px;
+            margin: 0 0 5px;
+            padding: 1%;
+            border-radius: 5px;
+            align-items: center;
+            &_img{
+                aspect-ratio: 1;
+                height: 100%;
+                border-radius: 5px;
+            }
+            &_infor{
+                &_name{
+                    font-size: 15px;
+                }
+                &_price,
+                &_quantity{
+                    font-size: 13px;
+                }
+            }
+            &_del{
+                position: absolute;
+                 right: 20px;
+                 top: 50%;
+                 transform: translateY(-50%);
+                opacity: 0.5;
+                transition: 0.25s linear;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &_btn{
+        width: 99%;
+        display: flex;
+        justify-content: space-between;
+        &_del,
+        &_buy{
+            border: unset;
+            background-color: $gray;
+            width: calc(50% - 4px);
+            padding: {
+                top: 5px;
+                bottom: 5px;
+            };
+            margin: 5px 0 0;
+            border: 1px $green solid;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            color: $green;
+            font-size: 13px;
+            transition: 0.25s linear;
+            &:hover,
+            &:active{
+                background-color: $green;
+                color: $gray;
+            }
+        }
+    }
 }

@@ -1,5 +1,5 @@
 import { Link, Route, Routes } from "react-router-dom";
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 import {GlobalContext} from "../../GlobalContext";
 import Cart from "../cart/Cart";
@@ -7,6 +7,12 @@ import './header.scss'
 
 const Header = () => {
     const {search} = useContext(GlobalContext)
+
+    // ẩn và hiện giỏ hàng
+    const [showCart, setShowCart] = useState(false)
+    const handleShowCart = () => {
+        setShowCart(!showCart)
+    }
     return(
         <>
             <div className="header_fake"></div>
@@ -51,11 +57,12 @@ const Header = () => {
                             type="text" className="header_tool_search_input"
                             onChange={(e)=>{search(e.target.value)}}/>
                     </div>
-                    <i className="fa-solid fa-cart-shopping header_tool_cart header_tool_element"></i>
-                    <i className="fa-solid fa-user header_tool_profile header_tool_element"></i>
+                    <i className="fa-solid fa-cart-shopping header_tool_cart header_tool_element pointer"
+                       onClick={()=>{handleShowCart()}}></i>
+                    <i className="fa-solid fa-user header_tool_profile header_tool_element pointer"></i>
                 </div>
             </header>
-            <Cart/>
+            {showCart&&<Cart handleShowCart={handleShowCart}/>}
         </>
     )
 }

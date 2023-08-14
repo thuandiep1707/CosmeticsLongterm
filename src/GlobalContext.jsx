@@ -17,9 +17,25 @@ const GlobalProvider = ({children}) => {
         {
             "id":"01",
             "name":"COME OUT",
-            "author":"EAU DE PARFUM",
             "price":5300000,
             "img":"http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
+            "categoryName"  : "perfume",
+            "quantity":5
+        },
+        {
+            "id":"02",
+            "name":"I'M NOT A BAD MAN",
+            "price":5300000,
+            "img":"http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
+            "categoryName"  : "perfume",
+            "quantity":5
+        },
+        {
+            "id":"03",
+            "name":"THE ART OF SEDUCTION",
+            "price":5300000,
+            "img":"http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
+            "categoryName"  : "perfume",
             "quantity":5
         }
     ]) 
@@ -49,6 +65,7 @@ const GlobalProvider = ({children}) => {
         bestSales,
         portfolio,
         footerData,
+        cart,
         search
     }
 

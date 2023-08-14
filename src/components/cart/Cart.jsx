@@ -5,12 +5,41 @@ import { GlobalContext } from "../../GlobalContext"
 import "./cart.scss"
 
 const Cart = () => {
+    const {cart} = useContext(GlobalContext)
     
-    return (
-        <div className="cart">
-            sadlhkjsd
-        </div>
-    )
+    const handleChangeUrl = (value) => {
+        console.log(value)
+    }
+    
+    if (!cart){
+        return (
+            <div className="cart">
+                <div className="cart_list null">Giỏ hàng trống</div>
+            </div>
+        )
+    } else {
+        return (
+            <div className="cart">
+                <div className="cart_list">
+                    {cart.map((value, index) => {return(
+                        <div className="cart_list_item" key={index}>
+                            <img src={value.img} alt="" className="cart_list_item_img" onClick={()=>handleChangeUrl(value)}/>
+                            <div className="cart_list_item_infor" onClick={()=>handleChangeUrl(value)}>
+                                <div className="cart_list_item_infor_name">{value.name}</div>
+                                <div className="cart_list_item_infor_price">Giá: {value.price}</div>
+                                <div className="cart_list_item_infor_quantity">Số lượng: {value.quantity}</div>
+                            </div>
+                            <i className="fa-solid fa-xmark cart_list_item_del"></i>
+                        </div>
+                    )})}
+                </div>
+                <div className="cart_btn">
+                    <button className="cart_btn_del">XÓA HẾT</button>
+                    <button className="cart_btn_buy">MUA NGAY</button>
+                </div>
+            </div>
+        )
+    }
 }
 
 export default Cart
