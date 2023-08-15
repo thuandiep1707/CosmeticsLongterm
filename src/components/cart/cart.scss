@@ -86,7 +86,7 @@ $white: #FEFEFE;
         &_del,
         &_buy{
             border: unset;
-            background-color: $gray;
+            background-color: $white;
             width: calc(50% - 4px);
             padding: {
                 top: 5px;
