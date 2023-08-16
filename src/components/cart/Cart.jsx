@@ -5,10 +5,17 @@ import { GlobalContext } from "../../GlobalContext"
 import "./cart.scss"
 
 const Cart = ({handleShowCart}) => {
-    const {cart} = useContext(GlobalContext)
-    
+    const {cart,setCart} = useContext(GlobalContext)
     const handleChangeUrl = (value) => {
         console.log(value)
+    }
+    const handleClickDel = (product) => {
+        const newCart = cart.filter((value)=>{return(value.id !== product.id)})
+        setCart(newCart && null)
+    }
+    const handleClickDelAll = () => {
+        setCart(null)
+        handleShowCart()
     }
     const handleClickBuy = () => {
         handleShowCart()
@@ -43,12 +50,12 @@ const Cart = ({handleShowCart}) => {
                                 <div className="cart_list_item_infor_price">Giá: {value.price}</div>
                                 <div className="cart_list_item_infor_quantity">Số lượng: {value.quantity}</div>
                             </div>
-                            <i className="fa-solid fa-xmark cart_list_item_del"></i>
+                            <i className="fa-solid fa-xmark cart_list_item_del" onClick={()=>handleClickDel(value)}></i>
                         </div>
                     )})}
                 </div>
                 <div className="cart_btn">
-                    <button className="cart_btn_del">XÓA HẾT</button>
+                    <button className="cart_btn_del" onClick={()=>handleClickDelAll()}>XÓA HẾT</button>
                     <button className="cart_btn_buy"  onClick={()=>handleClickBuy()}>MUA NGAY</button>
                 </div>
             </div>

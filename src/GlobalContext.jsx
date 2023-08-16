@@ -21,43 +21,28 @@ const GlobalProvider = ({children}) => {
             "img":"http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
             "categoryName"  : "perfume",
             "quantity":5
-        },
-        {
-            "id":"02",
-            "name":"I'M NOT A BAD MAN",
-            "price":5300000,
-            "img":"http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
-            "categoryName"  : "perfume",
-            "quantity":5
-        },
-        {
-            "id":"03",
-            "name":"THE ART OF SEDUCTION",
-            "price":5300000,
-            "img":"http://drive.google.com/uc?export=view&id=1sbV1Jyr8MDMHwCJlgY1EYYw8CZu5ISuq",
-            "categoryName"  : "perfume",
-            "quantity":5
         }
     ]) 
-    const addProdToCart = (product) => {
-        if (cart) {
-            let cartCopy = cart
-            let position
-            let quantity
-            for (let i = 0; i < cartCopy.length; i++){
-                if (cartCopy[i].infor.id === product.id) {
-                    position = i
-                    quantity = cartCopy[i].quantity +product.quantity
-                    break
-                }
-            }
-            if (!position){
-                cartCopy = [...cartCopy, product]
-            }
-            return
-        }
-        return setCart(product)
-    }
+    // const addProdToCart = (product) => {
+    //     console.log(product)
+    //     if (cart) {
+    //         let cartCopy = cart
+    //         let position
+    //         let quantity
+    //         for (let i = 0; i < cartCopy.length; i++){
+    //             if (cartCopy[i].infor.id === product.id) {
+    //                 position = i
+    //                 quantity = cartCopy[i].quantity +product.quantity
+    //                 break
+    //             }
+    //         }
+    //         if (!position){
+    //             cartCopy = [...cartCopy, product]
+    //         }
+    //         return
+    //     }
+    //     return setCart(product)
+    // }
 
     const value = {
         productsData,
@@ -66,6 +51,8 @@ const GlobalProvider = ({children}) => {
         portfolio,
         footerData,
         cart,
+        setCart,
+        // addProdToCart,
         search
     }
 

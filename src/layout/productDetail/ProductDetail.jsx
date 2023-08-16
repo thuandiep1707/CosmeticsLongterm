@@ -9,7 +9,7 @@ import './productdetail.scss'
 
 const ProductDetail = () => {
     const {productstyle, id} = useParams()
-    const {productsData} = useContext(GlobalContext)
+    const {productsData, cart, setCart} = useContext(GlobalContext)
     const [likeStyleList, setLikeStyleList] = useState(productsData)
     const [recommendList, setRecommendList ] = useState(productsData) //danh sách sản phẩm ở phần recommend
     const [product, setProduct] = useState(productsData[Number(id)-1]) //thông tin sản phẩm sẽ hiển thị
@@ -40,12 +40,50 @@ const ProductDetail = () => {
         window.scrollTo({top:0,left:0,behavior:"smooth"})
     },[id])
 
+    // let sports = [{"a":"âsass"}];
+    // sports.push(product);
+
+// console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+// console.log(total); // 4
+
+    const addProdToCart = (product) => {
+        console.log("product>>",product)
+        // console.log("cart>>>>>",cart)
+        if (cart) {
+            let cartCopy = cart
+            let prodCopy = product
+            for (let i = 0; i < cartCopy.length; i++){
+                if (cartCopy[i].id === prodCopy.id) {
+                    prodCopy.quantity += cartCopy[i].quantity
+                    cartCopy = cartCopy.filter((value)=>{return value.id !== cartCopy[i].id})
+                    console.log(prodCopy)
+                    break
+                }
+            }
+            cartCopy.push(product)
+            cartCopy.sort((a,b)=>Number(a.id) - Number(b.id))
+            console.log(cartCopy)
+            return setCart(cartCopy)
+        } 
+        else {
+            return setCart([product])
+        }
+    }
+
     const handleChangeQuantity = (value)=>{
         setQuantity(value)
     }
-    const handleClickAdd = () => {
-        //
-        console.log("add")
+    const handleClickAdd = (product) => {
+        let prodAddToCard = {
+            "id":product.id,
+            "name":product.name,
+            "price":product.price,
+            "img":product.img[0],
+            "categoryName"  : product.categoryName,
+            "quantity": Number(quantity)
+        } 
+        // console.log(prodAddToCard)
+        addProdToCart(prodAddToCard)
     }
     const handleCLickBuy = () => {
         //
@@ -77,7 +115,7 @@ const ProductDetail = () => {
                         <input id="quantity" type="number" value={quantity} onChange={(e)=>{handleChangeQuantity(e.target.value)}} className="product_detail_container_content_quantity_input" />
                     </div>   
                     <div className="product_detail_container_content_btn">
-                        <button className="product_detail_container_content_btn_add" onClick={()=>handleClickAdd()}>
+                        <button className="product_detail_container_content_btn_add" onClick={()=>handleClickAdd(product)}>
                             <i className="fa-solid fa-cart-shopping header_tool_cart header_tool_element"/>
                             THÊM VÀO GIỎ HÀNG
                         </button>
