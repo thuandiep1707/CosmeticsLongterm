@@ -11,7 +11,8 @@ const GlobalProvider = ({children}) => {
     const search = (product_name) => {
         console.log(product_name)
     }
-
+    // ẩn/hiện giỏ hàng
+    const [showCart, setShowCart] = useState(false)
     // chức năng thêm sản phẩm vào giỏ hàng
     const [cart, setCart] = useState([
         {
@@ -51,8 +52,9 @@ const GlobalProvider = ({children}) => {
         portfolio,
         footerData,
         cart,
+        showCart,
         setCart,
-        // addProdToCart,
+        setShowCart,
         search
     }
 

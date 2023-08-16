@@ -1,5 +1,5 @@
 import {useState, useEffect, useContext} from 'react'
-import {Link, useParams} from 'react-router-dom'
+import {Link, useParams, useNavigate} from 'react-router-dom'
 
 import ProductCard from '../../components/productCard/ProductCard'
 import { GlobalContext } from '../../GlobalContext'
@@ -8,6 +8,8 @@ import './productdetail.scss'
 
 
 const ProductDetail = () => {
+    const nav = useNavigate()
+
     const {productstyle, id} = useParams()
     const {productsData, cart, setCart} = useContext(GlobalContext)
     const [likeStyleList, setLikeStyleList] = useState(productsData)
@@ -47,8 +49,6 @@ const ProductDetail = () => {
 // console.log(total); // 4
 
     const addProdToCart = (product) => {
-        console.log("product>>",product)
-        // console.log("cart>>>>>",cart)
         if (cart) {
             let cartCopy = cart
             let prodCopy = product
@@ -56,13 +56,11 @@ const ProductDetail = () => {
                 if (cartCopy[i].id === prodCopy.id) {
                     prodCopy.quantity += cartCopy[i].quantity
                     cartCopy = cartCopy.filter((value)=>{return value.id !== cartCopy[i].id})
-                    console.log(prodCopy)
                     break
                 }
             }
             cartCopy.push(product)
             cartCopy.sort((a,b)=>Number(a.id) - Number(b.id))
-            console.log(cartCopy)
             return setCart(cartCopy)
         } 
         else {
@@ -82,12 +80,12 @@ const ProductDetail = () => {
             "categoryName"  : product.categoryName,
             "quantity": Number(quantity)
         } 
-        // console.log(prodAddToCard)
         addProdToCart(prodAddToCard)
+        setQuantity(1)
     }
-    const handleCLickBuy = () => {
-        //
-        console.log("buy")
+    const handleCLickBuy = (product) => {
+        handleClickAdd(product)
+        nav("/checkout")
     }
     return (
         <div className="product_detail">
@@ -119,7 +117,7 @@ const ProductDetail = () => {
                             <i className="fa-solid fa-cart-shopping header_tool_cart header_tool_element"/>
                             THÊM VÀO GIỎ HÀNG
                         </button>
-                        <button className="product_detail_container_content_btn_buy" onClick={()=>handleCLickBuy()}>MUA NGAY</button>
+                        <button className="product_detail_container_content_btn_buy" onClick={()=>handleCLickBuy(product)}>MUA NGAY</button>
                     </div>
                     <p className="product_detail_container_content_discovery">Discovery Set</p>
                     <p className="product_detail_container_content_try">Quý khách có thể trải nghiệm trực tiếp sản phẩm tại cửa hàng trước khi quyết định</p>

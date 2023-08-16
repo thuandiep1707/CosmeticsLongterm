@@ -6,10 +6,7 @@ import Cart from "../cart/Cart";
 import './header.scss'
 
 const Header = () => {
-    const {search} = useContext(GlobalContext)
-
-    // ẩn và hiện giỏ hàng
-    const [showCart, setShowCart] = useState(false)
+    const {search,showCart, setShowCart} = useContext(GlobalContext)
     const handleShowCart = () => {
         setShowCart(!showCart)
     }

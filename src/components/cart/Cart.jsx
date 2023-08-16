@@ -1,40 +1,56 @@
-import {useContext} from 'react'
+import {useState, useContext, useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 
 import { GlobalContext } from "../../GlobalContext"
 import "./cart.scss"
 
 const Cart = ({handleShowCart}) => {
+    const nav = useNavigate()
+
     const {cart,setCart} = useContext(GlobalContext)
+
     const handleChangeUrl = (value) => {
-        console.log(value)
+        nav(`/shop/${value.categoryName}/${value.id}`)
     }
+
     const handleClickDel = (product) => {
         const newCart = cart.filter((value)=>{return(value.id !== product.id)})
-        setCart(newCart && null)
+        if (newCart == false) {
+            setCart(null)
+            handleShowCart()
+            return
+        } 
+        setCart(newCart)
     }
+
     const handleClickDelAll = () => {
         setCart(null)
         handleShowCart()
     }
+    
     const handleClickBuy = () => {
         handleShowCart()
     }
+    
+    const handleHiddenCart = (e) => {
+        handleShowCart()
+    }
+    
     if (!cart){
         return (
-            <div className="cart">
+            <div className="cart" onMouseLeave={(e) =>{handleHiddenCart(e)}}>
                 <div className="cart_name">
                     <p className="cart_name_cart">
                         <i className="fa-solid fa-cart-shopping"></i> 
                         Giỏ Hàng</p>
-                    <i className="fa-solid fa-xmark" onClick={()=>handleShowCart()}></i>
+                    <i className="fa-solid fa-xmark pointer" onClick={()=>handleShowCart()}></i>
                 </div>
                 <div className="cart_list null">Giỏ hàng trống</div>
             </div>
         )
     } else {
         return (
-            <div className="cart">
+            <div className="cart" onMouseLeave={(e) =>{handleHiddenCart(e)}}>
                 <div className="cart_name">
                     <p className="cart_name_cart">
                         <i className="fa-solid fa-cart-shopping cart_name_cart_icon"></i> 

@@ -13,7 +13,33 @@ $white: #FEFEFE;
     box-shadow: 0 0 15px 1px gray;
     opacity: 0;
     animation: cart_start 0.5s forwards;
-        color: $green;
+    color: $green;
+    &::before{
+        content: "";
+        display: block;
+        position: fixed;
+         top: 50px;
+         right: 0.5%;
+         z-index: 15;
+        width: 350px;
+        height: 50px;
+    }
+    &::after{
+        content: "";
+        display: block;
+        // background-color: white;
+        position: fixed;
+         top: 90px;
+         right: 60px;
+         z-index: 20;
+        // width: 20px;
+        // height: 20px;
+        border: {
+            bottom: 7px $white solid;
+            right: 8px transparent solid;
+            left: 8px transparent solid;
+        };
+    }
     &_name{
         display: flex;
         justify-content: space-between;
