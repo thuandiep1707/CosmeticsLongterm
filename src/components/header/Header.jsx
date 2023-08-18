@@ -1,12 +1,37 @@
-import { Link, Route, Routes } from "react-router-dom";
-import { useContext, useState } from 'react'
+import { Link } from "react-router-dom";
+import { useContext, useState, useTransition } from 'react'
 
 import {GlobalContext} from "../../GlobalContext";
 import Cart from "../cart/Cart";
+import {Loading, Search} from "../search/Search"
+
 import './header.scss'
 
 const Header = () => {
-    const {search,showCart, setShowCart} = useContext(GlobalContext)
+
+    const {showCart, setShowCart, productsData} = useContext(GlobalContext)
+    
+    //xử lý tìm kiếm
+    const [searchInput, setSearchInput] = useState()
+    const [dataSearch, setDataSearch] = useState()
+    const [isLoading, startTrasition] = useTransition()
+    const handleSearch = (value) => {
+        setSearchInput(value)
+        startTrasition(() => {
+            if (value != ""){
+                const data = []
+                productsData.forEach(element => {
+                if (element.name.search(value) !== -1){
+                    data.push(element)
+                }});
+                setDataSearch(data)
+            } else {
+                setDataSearch()
+            }
+        })
+    } 
+
+    //xử lý giỏ hàng
     const handleShowCart = () => {
         setShowCart(!showCart)
     }
@@ -52,7 +77,7 @@ const Header = () => {
                         <i className="fa-solid fa-magnifying-glass header_tool_search_icon"></i>
                         <input placeholder="Bạn muốn tìm sản phẩm gì?" 
                             type="text" className="header_tool_search_input"
-                            onChange={(e)=>{search(e.target.value)}}/>
+                            onChange={(e)=>{handleSearch(e.target.value.toLocaleUpperCase())}}/>
                     </div>
                     <i className="fa-solid fa-cart-shopping header_tool_cart header_tool_element pointer"
                        onClick={()=>{handleShowCart()}}></i>
@@ -60,6 +85,7 @@ const Header = () => {
                 </div>
             </header>
             {showCart&&<Cart handleShowCart={handleShowCart}/>}
+            {isLoading ? <Loading/> : ( dataSearch && <Search setSearchInput={setSearchInput} setDataSearch={setDataSearch} searchInput={searchInput} value={dataSearch}/>)}
         </>
     )
 }
