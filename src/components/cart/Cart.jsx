@@ -11,6 +11,7 @@ const Cart = ({handleShowCart}) => {
 
     const handleChangeUrl = (value) => {
         nav(`/shop/${value.categoryName}/${value.id}`)
+        handleShowCart()
     }
 
     const handleClickDel = (product) => {
@@ -29,6 +30,7 @@ const Cart = ({handleShowCart}) => {
     }
     
     const handleClickBuy = () => {
+        nav('/checkout')
         handleShowCart()
     }
     
