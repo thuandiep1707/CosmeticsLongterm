@@ -1,0 +1,134 @@
+$browse: #B38B59;
+$green: #113E21;
+$gray: #F0F0F0;
+$white: #FEFEFE;
+
+.check_out{
+    background-color: $white;
+    display: flex;
+     justify-content: space-evenly;
+    position: relative;
+    margin: 5px 0;
+    padding: 30px 5px 5px;
+    border-radius: 5px;
+    &_cart_list{
+        width: 40%;
+        height: 485px;
+        padding: 5px;
+        border-top: 1px $green solid;
+        // border-radius: 5px;
+        overflow-y: scroll;
+        &_name{
+            background-color: $green;
+            position: absolute;
+            top: 8px;
+            padding: 2px 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            color: $gray;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        &_item{
+            position: relative;
+            display: flex;
+            justify-content: start;
+            align-items:self-start;
+            background-color: $gray;
+            height: 100px;
+            margin: 5px;
+            padding: 5px;
+            border: green 1px solid;
+            border-radius: 5px;
+            &_img{
+                height: 100%;
+                aspect-ratio: 1;
+                margin-right: 10px;
+            }
+            &_infor{
+                color: $green;
+                &_name{
+                    font-size: 25px;
+                    margin-top: 5px;
+                    margin-bottom: 15px;
+                }
+                &_price, &_quantity{
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
+            &_del{
+                position: absolute;
+                 top: 50%;
+                 right: 20px;
+                 transform: translateY(-50%);
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                font-size: 30px;
+                text-align: center;
+                padding-top: 25px;
+                color: $green;
+                opacity: 0.5;
+                transition: 0.25s linear;
+                &:hover{
+                    background-color: $white;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &_user_infor{
+        position: relative;
+        width: 40%;
+        height: 100%;
+        border-top:1px $green solid;
+        padding: 5px;
+        &_name{
+            background-color: $green;
+            position: absolute;
+            top: -23px;
+            padding: 2px 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            color: $gray;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+        &_box{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 5px;
+            color: $green;
+            // border-bottom: 1px $green solid;
+        }
+        &_line_end{
+            width: 100%;
+            margin: 10px 0;
+            padding-bottom: 5px;
+            border-bottom: $green 1px solid;
+            text-align: center;
+            color: $green;
+        }
+        &_btn{
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            &_out, &_pay{
+                background-color: $white;
+                margin-left: 10px;
+                padding: 5px 10px;
+                border: 2px $green solid;
+                border-radius: 5px;
+                letter-spacing: 1px;
+                color: $green;
+                font-size: 16px;
+                transition: all .25s linear;
+                &:hover{
+                    background-color: $green;
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
