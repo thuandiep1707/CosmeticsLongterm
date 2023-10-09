@@ -9,7 +9,7 @@ const Blog = () => {
 
     return (
         <div className="blog">
-            blog nè
+            Các bài viết đang trong giai đoạn hoàn thiện, mời quý khách quay lại sau
         </div>
     )
 }

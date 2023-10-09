@@ -1,12 +1,16 @@
 .slides{
     position: relative;
+    box-sizing: border-box;
     aspect-ratio : 2.5;
-    background-color: rgba(0, 0, 0, 0.657);
+    // background-color: rgba(0, 0, 0, 0.657);
     width: 100%;
+    margin: 5px 10px;
     padding: unset;
+    border-radius: 5px;
     
     &_img{
-        width: 100%;
+        border-radius: 5px;
+        width: calc(100% - 20px);
         height: calc(100% + 4px);
         animation: start_img 1s forwards;
         opacity: 0;
@@ -42,6 +46,7 @@
         width: 100%;
         position: absolute;
         top:0;
+        border-radius: 5px;
         &_prev,
         &_next{
             all: unset;
